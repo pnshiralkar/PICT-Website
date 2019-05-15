@@ -10,22 +10,24 @@
     <link rel="icon" href="images/icon.jpg" sizes="32x32"/>
     <link rel="icon" href="images/icon.jpg" sizes="192x192"/>
     <link rel="apple-touch-icon-precomposed" href="images/icon.jpg"/>
-
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+    <!--Theme-->
     <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all'/>
     <link rel='stylesheet' href='css/kingster-style-custom.css' type='text/css' media='all'/>
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all'/>
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="css/cards.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet"
-          property="stylesheet" type="text/css" media="all">
-    <link rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3'
-          type='text/css' media='all'/>
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 
     <style>
@@ -170,7 +172,7 @@
 
 
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script><script>
+    <script>
     $(document).ready(function () {
         $('.msg-bg').attr("style", "height: " + $('.msg').height() + "px;");
         console.log($('.msg').height());
@@ -903,72 +905,149 @@
                         </div>
                     </div>
                 </div>
-                <div class="gdlr-core-pbf-wrapper  hp1-col-services" data-skin="Blue Title"
-                     style="max-width: 1320px; margin: -43px auto 0px auto; padding: 0px 0px 0px 0px;">
-                    <div class="gdlr-core-pbf-background-wrap"></div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
-                            <div class=" gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix"
-                                 id="div_1dd7_0">
-                                <h3 style="text-align: center; margin-top: 5px">University Toppers</h3>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_1">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                                     id="div_1dd7_2">
-                                                    <div class="circle"
-                                                         style="background-color: gray; height: 100px; width: 100px; border-radius:50% "></div>
 
-                                                </div>
-                                            </div>
-                                        </div>
+
+                <div class="uni_toppers_wrapper text-center">
+                    <h3>University Toppers</h3>
+                <div class="uni_toppers">
+                    <div class="div1">
+                        <div class="col-sm-3" id="team">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--1">TOPPER1</span>
+                                    </h4>
+                                    <div class="card__details">
+                                        First_Name Last_Name
                                     </div>
                                 </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15" id="gdlr-core-column-1">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_4">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                                     id="div_1dd7_5">
-                                                    <div class="circle"
-                                                         style="background-color: gray; height: 100px; width: 100px; border-radius:50% "></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15" id="gdlr-core-column-2">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_7">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                                     id="div_1dd7_8">
-                                                    <div class="circle"
-                                                         style="background-color: gray; height: 100px; width: 100px; border-radius:50% "></div>
+                                <div class="card__side card__side--back card__side--back-1">
+                                    <div class="card__cta">
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-15" id="gdlr-core-column-3">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_10">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                                     id="div_1dd7_11">
-                                                    <div class="circle"
-                                                         style="background-color: gray; height: 100px; width: 100px; border-radius:50% "></div>
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/manjeeta.kale" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/manjeeta-kale-b25134168/"class="fab fa-linkedin"></a>
 
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--2">TOPPER2</span>
+                                    </h4>
+                                    <div class="card__details">
+                                        XyZ
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-2">
+                                    <div class="card__cta">
+
+
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/tusharshelar28" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/tushar-shelar/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/shelar.tushar07/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--3">TOPPER3</span>
+                                    </h4>
+                                    <div class="card__details">xYZ
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-3">
+                                    <div class="card__cta">
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--4 bg-dark">TOPPER4</span>
+                                    </h4>
+                                    <div class="card__details">XYz
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-4">
+                                    <div class="card__cta">
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- This div is intentionally kept empty (content added using js) --><div class="div2"></div>
+                </div>
+
+
+
+                <script type="text/javascript">
+
+                    function pause(){
+                        $(".div1").attr("style", "animation-play-state: paused;");
+                        $(".div2").attr("style", "animation-play-state: paused;");
+                    }
+
+                    $('.div2').html($('.div1').html());
+
+                    function play(){
+                        $(".div1").attr("style", "");
+                        $(".div2").attr("style", "");
+                    }
+
+                    $(".div1").hover(pause, play);
+                    $(".div2").hover(pause, play);
+                </script>
                 </div>
 
 
