@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pune Instiute of Computer Technology</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .introvdo{
+            width: 100%;
+            display: none;
+
+        }
+        #introimg{
+            position: relative;top: 0;left: 0;width: 100%;height: 100%;
+        }
+        .intro-cover{
+            background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.90), rgba(0,0,0,0.8));
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+        .intro-title{
+            transform: translateY(-50%);
+            z-index: 11;
+            position: relative;
+            top: 50vh;
+            height: 25%;
+            color: #fff;
+            filter: drop-shadow(4px 4px rgba(0,0,0,0.95));
+        }
+    </style>
+
+</head>
+
+<body>
+<div style="position: relative;height: 100vh;width: 100%;overflow: hidden;">
+    <video id="introvdo" class="introvdo" muted loop playsinline>
+    </video>
+    <img id="introimg" src="images/bg.JPG" style="">
+    <div class="intro-cover">
+        <img src="images/logo.png" class="intro-title">
+    </div>
+</div>
+<div class="content" style="height: 1000px;">
+    ..
+</div>
+    <script>
+
+
+        var video = document.getElementById('introvdo');
+
+        var req = new XMLHttpRequest();
+        req.open('GET', "https://cors-anywhere.herokuapp.com/http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4", true);
+        req.responseType = 'blob';
+        req.setRequestHeader("Cache-Control", "public, max-age=360000");
+        var prog = 0;
+        req.onprogress = function(p)
+        {
+            if(prog !== Math.round(p.loaded/p.total*100)) {
+                prog = Math.round(p.loaded / p.total * 100);
+                console.log("Progress: " + prog + "%");
+            }
+        };
+
+        req.onload = function() {
+            // Onload is triggered even on 404
+            // so we need to check the status code
+            if (this.status === 200) {
+                var videoBlob = this.response;
+                var vid = URL.createObjectURL(videoBlob); // IE10+
+                console.log("Loaded fully");
+                // Video is now downloaded
+                // and we can set it as source on the video element
+                video.src = vid;
+                video.style.display = "block";
+                document.getElementById('introimg').style.display = "none";
+                video.play();
+            }
+        };
+        req.onerror = function() {
+            // Error
+            console.log("Err");
+        };
+
+        req.send();
+
+    </script>
+</body>
