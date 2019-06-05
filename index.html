@@ -49,7 +49,7 @@
             z-index: -1;
             top: 0px;
             left: 0px;
-            filter: blur(9px);
+            filter: blur(3px);
             width: 100%;
             border: 1px black solid;
         }
@@ -101,7 +101,7 @@
             width: 51vw;
             height: 100vh;
             z-index: 1001;
-            transition: all 0.7s ease-in;
+            transition: all 0.7s;
         }
 
         .preloader-right{
@@ -112,7 +112,7 @@
             width: 51vw;
             height: 100vh;
             z-index: 1001;
-            transition: all 0.7s ease-in;
+            transition: all 0.7s;
         }
 
         .preloader-cont{
@@ -125,25 +125,10 @@
             transition: all 0.4s;
             font-size: larger;
         }
-
+        
         .preloader-logo{
             width: 12vw;
-            animation: logo1 1s infinite;
-            transition: opacity 0.4s ease-in;
-
-        }
-
-        @keyframes logo {
-            0% {transform: rotateY(0deg);}
-            50% {transform: rotateY(90deg);}
-            50% {transform: rotateY(-90deg);}
-            100% {transform: rotateY(0deg);}
-        }
-
-        @keyframes logo1 {
-            0% {transform: scale3d(1,1,1);}
-            50% {transform: scale3d(1.1,1.1,1.6);}
-            100% {transform: scale3d(1,1,1);}
+            transition: all 0.4s;
         }
 
         .btn_top{
@@ -188,27 +173,27 @@
 
     </style>
     <script>
-        $(document).ready(function () {
-            $('.msg-bg').attr("style", "height: " + $('.msg').height() + "px;");
-            console.log($('.msg').height());
-        });
+    $(document).ready(function () {
+        $('.msg-bg').attr("style", "height: " + $('.msg').height() + "px;");
+        console.log($('.msg').height());
+    });
 
-        $(window).scroll(function () {
-            if($(window).scrollTop()>200){
-                $('#btn_top').attr("class", "btn_top bg-dark text-center");
-            }
-            if($(window).scrollTop()<200){
-                $('#btn_top').attr("class", "btn_top bg-dark text-center btn_top_hide");
-            }
-        });
+    $(window).scroll(function () {
+        if($(window).scrollTop()>200){
+            $('#btn_top').attr("class", "btn_top bg-dark text-center");
+        }
+        if($(window).scrollTop()<200){
+            $('#btn_top').attr("class", "btn_top bg-dark text-center btn_top_hide");
+        }
+    });
 
-        $(window).on("load", function () {
-            $("#preloader-left").attr("class", $("#preloader-left").attr("class") + " preloader-loaded");
-            $("#preloader-right").attr("class", $("#preloader-right").attr("class") + " preloader-loaded");
-            $("#preloader-cont").attr("class", $("#preloader-cont").attr("class") + " preloader-cont-loaded");
-        });
+    $(window).on("load", function () {
+        $("#preloader-left").attr("class", $("#preloader-left").attr("class") + " preloader-loaded");
+        $("#preloader-right").attr("class", $("#preloader-right").attr("class") + " preloader-loaded");
+        $("#preloader-cont").attr("class", $("#preloader-cont").attr("class") + " preloader-cont-loaded");
+    });
 
-    </script>
+</script>
 
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
@@ -217,7 +202,7 @@
 
     </div>
     <div class="preloader-right" id="preloader-right">
-
+        
     </div>
     <div class="preloader-cont text-muted text-center" id="preloader-cont">
         <img src="images/logo-pre.png" class="preloader-logo" id="preloader-logo"/>
@@ -390,58 +375,62 @@
                             <li class="menu-item menu-item-has-children"><a
                                     href="bachelor-of-science-in-business-administration.html">Academics</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item menu-item-has-children"><a>Undergraduate</a>
+                                    <li class="menu-item menu-item-has-children"><a>Departments</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a
-                                                    href="bachelor-of-science-in-business-administration.html">Business
-                                                Administration</a></li>
-                                            <li class="menu-item"><a href="school-of-law.html">School Of Law</a></li>
-                                            <li class="menu-item"><a href="engineering.html">Engineering</a></li>
-                                            <li class="menu-item"><a href="medicine.html">Medicine</a></li>
-                                            <li class="menu-item"><a href="art-science.html">Art &#038; Science</a></li>
+                                                    href="#">First Year Engineering</a></li>
+                                            <li class="menu-item"><a href="#">Computer Engineering</a></li>
+                                            <li class="menu-item"><a href="#">Electronics and Telecommunication</a></li>
+                                            <li class="menu-item"><a href="#">Information Technology</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children"><a href="#">Graduate Program</a>
+                                    <li class="menu-item menu-item-has-children"><a href="#">Student</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="hospitality-management.html">Hospitality
-                                                Management</a></li>
-                                            <li class="menu-item"><a href="physics.html">Physics</a></li>
-                                            <li class="menu-item"><a href="#">Chemistry</a></li>
-                                            <li class="menu-item"><a href="#">Music</a></li>
-                                            <li class="menu-item"><a href="#">Computer Science</a></li>
+                                            <li class="menu-item"><a href="#">Time Table</a></li>
+                                            <li class="menu-item"><a href="#">Downloads</a></li>
+
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children"><a href="#">Resources</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a
-                                                    href="bachelor-of-science-in-business-administration.html">Department
-                                                Page</a></li>
-                                            <li class="menu-item"><a href="finance.html">Major Page</a></li>
-                                            <li class="menu-item"><a href="finance-faculty.html">Faculty Page</a></li>
-                                            <li class="menu-item"><a href="john-hagensy-phd.html">Single Instructor</a>
-                                            </li>
-                                            <li class="menu-item"><a href="introduction-to-financial-accounting.html">Single
-                                                Course</a></li>
+                                                    href="bachelor-of-science-in-business-administration.html">Academic Calendar</a></li>
+
+
                                         </ul>
                                     </li>
-                                    <li class="menu-item"><a href="#">Logo</a></li>
+
                                 </ul>
                             </li>
-                            <li class="menu-item menu-item-has-children"><a href="apply-to-kingster.html">Admissions</a>
+                            <li class="menu-item menu-item-has-children"><a href="#">Admissions</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="apply-to-kingster.html">Apply To Kingster</a></li>
-                                    <li class="menu-item"><a href="campus-tour.html">Campus Tour</a></li>
-                                    <li class="menu-item"><a href="scholarships.html">Scholarships</a></li>
-                                    <li class="menu-item"><a href="athletics.html">Athletics</a></li>
-                                    <li class="menu-item"><a href="give-to-kingster.html">Give To Kingster</a></li>
-                                    <li class="menu-item"><a href="alumni.html">Alumni</a></li>
-                                    <li class="menu-item"><a href="event-calendar.html">Event Calendar</a></li>
+                                    <li class="menu-item"><a href="apply-to-kingster.html">Undergraduate</a></li>
+                                    <li class="menu-item"><a href="campus-tour.html">Postgraduate</a></li>
+                                    <li class="menu-item"><a href="scholarships.html">Fees Structure</a></li>
+                                    <li class="menu-item"><a href="athletics.html">Cut Off</a></li>
+
                                 </ul>
                             </li>
-                            <li class="menu-item menu-item-has-children"><a href="#">Courses</a>
+                            <li class="menu-item menu-item-has-children"><a href="#">Life@PICT</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="course-list-1.html">Course List 1</a></li>
-                                    <li class="menu-item"><a href="course-list-2.html">Course List 2</a></li>
+                                    <li class="menu-item"><a href="#">Campus Tour</a></li>
+                                    <li class="menu-item"><a href="#">Extra-Curricular</a></li>
+                                    <li class="menu-item"><a href="#">Co-Curricular</a></li>
+                                    <li class="menu-item menu-item-has-children"><a href="#">Common Facilities</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-has-children"><a href="">Hostel</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="">Girls</a></li>
+                                                    <li class="menu-item"><a href="">Boys</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item"><a href="">Medical</a></li>
+                                            <li class="menu-item"><a href="">Sports</a></li>
+                                            <li class="menu-item"><a href="">Internet</a></li>
+
+
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="menu-item"><a href="athletics.html">Athletics</a></li>
@@ -499,11 +488,15 @@
                                                                                                      class="sf-with-ul-pre">About
                                     Us</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="#">PICT At Glance</a></li>
-                                        <li class="menu-item"><a href="#">History</a></li>
-                                        <li class="menu-item"><a href="#">Pricipal's Message</a></li>
+                                        <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#">PICT At Glance</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="#">Vision Misson</a></li>
+                                                <li class="menu-item"><a href="#">Basic Info</a></li>
+                                                <li class="menu-item"><a href="#">History</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="menu-item"><a href="#">Registrar's Office</a></li>
-                                        <li class="menu-item"><a href="#">Contact Us</a></li>
+
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children kingster-mega-menu"><a
@@ -512,46 +505,33 @@
                                     <div class="sf-mega sf-mega-full megaimg">
                                         <ul class="sub-menu">
                                             <li class="menu-item menu-item-has-children" data-size="15"><a
-                                                    class="sf-with-ul-pre">Undergraduate</a>
+                                                    class="sf-with-ul-pre">Departments</a>
                                                 <ul class="sub-menu">
                                                     <li class="menu-item"><a
-                                                            href="bachelor-of-science-in-business-administration.html">Business
-                                                        Administration</a></li>
-                                                    <li class="menu-item"><a href="school-of-law.html">School Of Law</a>
+                                                            href="#">First Year Engineering</a></li>
+                                                    <li class="menu-item"><a href="#">Computer Engineering</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="engineering.html">Engineering</a>
+                                                    <li class="menu-item"><a href="#">Electronics and Telecommunication</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="medicine.html">Medicine</a></li>
-                                                    <li class="menu-item"><a href="art-science.html">Art &#038;
-                                                        Science</a></li>
+                                                    <li class="menu-item"><a href="#">Information Technology</a></li>
+
+
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children" data-size="15"><a href="#"
-                                                                                                           class="sf-with-ul-pre">Graduate
-                                                Program</a>
+                                                                                                           class="sf-with-ul-pre">Student</a>
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="hospitality-management.html">Hospitality
-                                                        Management</a></li>
-                                                    <li class="menu-item"><a href="physics.html">Physics</a></li>
-                                                    <li class="menu-item"><a href="#">Chemistry</a></li>
-                                                    <li class="menu-item"><a href="#">Music</a></li>
-                                                    <li class="menu-item"><a href="#">Computer Science</a></li>
+                                                    <li class="menu-item"><a href="#">Time Table and Syllabus</a></li>
+                                                    <li class="menu-item"><a href="#">Downloads</a></li>
+
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children" data-size="15"><a href="#"
                                                                                                            class="sf-with-ul-pre">Resources</a>
                                                 <ul class="sub-menu">
                                                     <li class="menu-item"><a
-                                                            href="bachelor-of-science-in-business-administration.html">Department
-                                                        Page</a></li>
-                                                    <li class="menu-item"><a href="finance.html">Major Page</a></li>
-                                                    <li class="menu-item"><a href="finance-faculty.html">Faculty
-                                                        Page</a></li>
-                                                    <li class="menu-item"><a href="john-hagensy-phd.html">Single
-                                                        Instructor</a></li>
-                                                    <li class="menu-item"><a
-                                                            href="introduction-to-financial-accounting.html">Single
-                                                        Course</a></li>
+                                                            href="bachelor-of-science-in-business-administration.html">Academic Calendar</a></li>
+
                                                 </ul>
                                             </li>
                                             <li class="menu-item" data-size="15">
@@ -572,18 +552,34 @@
                                         <li class="menu-item" data-size="60"><a href="#">Cut Off</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#"
-                                                                                                     class="sf-with-ul-pre">Courses</a>
+                                <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#">Life@PICT</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item" data-size="60"><a href="course-list-1.html">Course List
-                                            1</a></li>
-                                        <li class="menu-item" data-size="60"><a href="course-list-2.html">Course List
-                                            2</a></li>
+                                        <li class="menu-item"><a href="#">Campus Tour</a></li>
+                                        <li class="menu-item"><a href="#">Extra-Curricular</a></li>
+                                        <li class="menu-item"><a href="#">Co-Curricular</a></li>
+                                        <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#">Common Facilities</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-has-children"><a href="">Hostel</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="">Girls</a></li>
+                                                        <li class="menu-item"><a href="">Boys</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item kingster-normal-menu"><a href="">Medical</a></li>
+                                                <li class="menu-item kingster-normal-menu"><a href="">Sports</a></li>
+                                                <li class="menu-item kingster-normal-menu"><a href="">Internet</a></li>
+
+
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item kingster-normal-menu"><a href="athletics.html">Athletics</a></li>
-                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">University
-                                    Life</a></li>
+
+                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">Results & Placements</a></li>
+                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">Library</a></li>
+                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">Cell@PICT</a></li>
+
+
                             </ul>
                             <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div>
                         </div>
@@ -924,145 +920,145 @@
 
                 <div class="uni_toppers_wrapper text-center">
                     <h3>University Toppers</h3>
-                    <div class="uni_toppers">
-                        <div class="div1">
-                            <div class="col-sm-3" id="team">
-                                <div class="card" data-aos="fade-up">
-                                    <div class="card__side card__side--front">
-                                        <div class="card__picture">
-                                            <img class="card_img" src="images/photo_trustee.png">
-                                        </div>
-                                        <h4 class="card__heading">
-                                            <span class="card__heading-span card__heading-span--1">TOPPER1</span>
-                                        </h4>
-                                        <div class="card__details">
-                                            First_Name Last_Name
-                                        </div>
+                <div class="uni_toppers">
+                    <div class="div1">
+                        <div class="col-sm-3" id="team">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
                                     </div>
-                                    <div class="card__side card__side--back card__side--back-1">
-                                        <div class="card__cta">
-
-                                            &nbsp;
-                                            <div class="social_handles">
-                                                <a href="https://www.facebook.com/manjeeta.kale" class="fab fa-facebook-square"></a>
-                                                <a href="https://www.linkedin.com/in/manjeeta-kale-b25134168/"class="fab fa-linkedin"></a>
-
-                                            </div>
-                                        </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--1">TOPPER1</span>
+                                    </h4>
+                                    <div class="card__details">
+                                        First_Name Last_Name
                                     </div>
                                 </div>
-                            </div>
+                                <div class="card__side card__side--back card__side--back-1">
+                                    <div class="card__cta">
 
-
-                            <div class="col-sm-3">
-                                <div class="card" data-aos="fade-up">
-                                    <div class="card__side card__side--front">
-                                        <div class="card__picture">
-                                            <img class="card_img" src="images/photo_trustee.png">
-                                        </div>
-                                        <h4 class="card__heading">
-                                            <span class="card__heading-span card__heading-span--2">TOPPER2</span>
-                                        </h4>
-                                        <div class="card__details">
-                                            XyZ
-                                        </div>
-
-                                    </div>
-                                    <div class="card__side card__side--back card__side--back-2">
-                                        <div class="card__cta">
-
-
-
-                                            &nbsp;
-                                            <div class="social_handles">
-                                                <a href="https://www.facebook.com/tusharshelar28" class="fab fa-facebook-square"></a>
-                                                <a href="https://www.linkedin.com/in/tushar-shelar/"class="fab fa-linkedin"></a>
-                                                <a href="https://www.instagram.com/shelar.tushar07/?hl=en"class="fab fa-instagram"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-3">
-                                <div class="card" data-aos="fade-up">
-                                    <div class="card__side card__side--front">
-                                        <div class="card__picture">
-                                            <img class="card_img" src="images/photo_trustee.png">
-                                        </div>
-                                        <h4 class="card__heading">
-                                            <span class="card__heading-span card__heading-span--3">TOPPER3</span>
-                                        </h4>
-                                        <div class="card__details">xYZ
-                                        </div>
-
-                                    </div>
-                                    <div class="card__side card__side--back card__side--back-3">
-                                        <div class="card__cta">
-
-                                            &nbsp;
-                                            <div class="social_handles">
-                                                <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
-                                                <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
-                                                <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div class="card" data-aos="fade-up">
-                                    <div class="card__side card__side--front">
-                                        <div class="card__picture">
-                                            <img class="card_img" src="images/photo_trustee.png">
-                                        </div>
-                                        <h4 class="card__heading">
-                                            <span class="card__heading-span card__heading-span--4 bg-dark">TOPPER4</span>
-                                        </h4>
-                                        <div class="card__details">XYz
-                                        </div>
-
-                                    </div>
-                                    <div class="card__side card__side--back card__side--back-4">
-                                        <div class="card__cta">
-
-                                            &nbsp;
-                                            <div class="social_handles">
-                                                <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
-                                                <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
-                                                <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
-                                            </div>
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/manjeeta.kale" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/manjeeta-kale-b25134168/"class="fab fa-linkedin"></a>
 
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- This div is intentionally kept empty (content added using js) --><div class="div2"></div>
+
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--2">TOPPER2</span>
+                                    </h4>
+                                    <div class="card__details">
+                                        XyZ
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-2">
+                                    <div class="card__cta">
+
+
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/tusharshelar28" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/tushar-shelar/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/shelar.tushar07/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--3">TOPPER3</span>
+                                    </h4>
+                                    <div class="card__details">xYZ
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-3">
+                                    <div class="card__cta">
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--4 bg-dark">TOPPER4</span>
+                                    </h4>
+                                    <div class="card__details">XYz
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-4">
+                                    <div class="card__cta">
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- This div is intentionally kept empty (content added using js) --><div class="div2"></div>
+                </div>
 
 
 
-                    <script type="text/javascript">
+                <script type="text/javascript">
 
-                        function pause(){
-                            $(".div1").attr("style", "animation-play-state: paused;");
-                            $(".div2").attr("style", "animation-play-state: paused;");
-                        }
+                    function pause(){
+                        $(".div1").attr("style", "animation-play-state: paused;");
+                        $(".div2").attr("style", "animation-play-state: paused;");
+                    }
 
-                        $('.div2').html($('.div1').html());
+                    $('.div2').html($('.div1').html());
 
-                        function play(){
-                            $(".div1").attr("style", "");
-                            $(".div2").attr("style", "");
-                        }
+                    function play(){
+                        $(".div1").attr("style", "");
+                        $(".div2").attr("style", "");
+                    }
 
-                        $(".div1").hover(pause, play);
-                        $(".div2").hover(pause, play);
-                    </script>
+                    $(".div1").hover(pause, play);
+                    $(".div2").hover(pause, play);
+                </script>
                 </div>
 
 
