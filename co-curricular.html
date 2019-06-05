@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kingster &#8211; School, College &amp; University HTML Template</title>
+
+    <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/kingster-style-custom.css' type='text/css' media='all' />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all' />
+
+    <style>
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .card{
+            padding: 0 90px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .card{
+                padding: 0 0;
+            }
+        }
+        
+        .div-array{
+            display: block;
+            margin: 0 10%;
+        }
+
+        .div-array:first-of-type{
+            margin: 0;
+        }
+        
+        .div-arr-hidden{
+            display: none;
+        }
+
+        .floating-btns-wrapper{
+            position: fixed;
+            width: 70%;
+            left: 15%;
+            /*background: rgba(0,0,0,0.4);*/
+            height: 84px;
+            border-radius: 35px;
+            z-index: 2;
+            bottom: 10px;
+        }
+
+        .floating-btns-container{
+            width: fit-content;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .floating-btns{
+            display: inline-block;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            margin: 4px 45px;
+            cursor: pointer;
+            box-shadow: 0 10px 16px 0 rgba(0,0,0,0.8),0 0px 10px 0 rgba(0,0,0,0.2),0 25px 100px 0 rgba(0,0,0,1) !important;
+            transform: scale(1,1);
+            transition: all 0.6s;
+        }
+
+        .floating-btns:hover{
+            display: inline-block;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            margin: 4px 45px;
+            cursor: pointer;
+            box-shadow: 0 10px 16px 0 rgba(0,0,0,0.8),0 0px 10px 0 rgba(0,0,0,0.2) !important;
+            transform: scale(1.1,1.1);
+            transition: all 0.6s;
+        }
+
+        .floating-btns:hover:after {
+            background: #333;
+            background: rgba(0, 0, 0, .8);
+            border-radius: 5px;
+            bottom: 81px;
+            color: #fff;
+            content: attr(title);
+            transform: translateX(-50%);
+            padding: 5px 15px;
+            margin: 0 39px;
+            position: absolute;
+            z-index: 98;
+            width: max-content;
+        }
+
+        .floating-btns:hover:before {
+            border: solid;
+            border-color: #333 transparent;
+            border-width: 6px 6px 0 6px;
+            bottom: 76px;
+            content: "";
+            margin: 0 33px;
+            position: absolute;
+            z-index: 99;
+        }
+
+        footer{
+            z-index: 3;
+            position: relative;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script>
+        var n=7;
+        function views(num) {
+            for(i=0;i<n;i++)
+            {
+                if(i!==num)
+                    $('#div-array-' + i).attr("class", "div-array div-arr-hidden");
+                else
+                    $('#div-array-' + i).attr("class", "div-array");
+                if(num!==0)
+                {
+                    $('.floating-btns-wrapper').attr("style", "display: block;");
+                }
+                else
+                    $('.floating-btns-wrapper').attr("style", "display: none;");
+            }
+            if(num!==0)
+                scrollTo(0,320);
+            else
+                scrollTo(0,0);
+        }
+        
+    </script>
+
+</head>
+
+<body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
+    <div class="kingster-mobile-header-wrap">
+        <div class="kingster-mobile-header kingster-header-background kingster-style-slide kingster-sticky-mobile-navigation " id="kingster-mobile-header">
+            <div class="kingster-mobile-header-container kingster-container clearfix">
+                <div class="kingster-logo  kingster-item-pdlr">
+                    <div class="kingster-logo-inner">
+                        <a class="" href="index.html"><img src="images/logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <div class="kingster-mobile-menu-right">
+                    <div class="kingster-main-menu-search" id="kingster-mobile-top-search"><i class="fa fa-search"></i></div>
+                    <div class="kingster-top-search-wrap">
+                        <div class="kingster-top-search-close"></div>
+                        <div class="kingster-top-search-row">
+                            <div class="kingster-top-search-cell">
+                                <form role="search" method="get" class="search-form" action="#">
+                                    <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="s">
+                                    <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
+                                    <input type="submit" class="search-submit" value="Search">
+                                    <div class="kingster-top-search-close"><i class="icon_close"></i></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kingster-mobile-menu"><a class="kingster-mm-menu-button kingster-mobile-menu-button kingster-mobile-button-hamburger" href="#kingster-mobile-menu"><span></span></a>
+                        <div class="kingster-mm-menu-wrap kingster-navigation-font" id="kingster-mobile-menu" data-slide="right">
+                            <ul id="menu-main-navigation" class="m-menu">
+                                <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="index.html">Home</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-home"><a href="index.html">Homepage 1</a></li>
+                                        <li class="menu-item"><a href="homepage-2.html">Homepage 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="#">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="about-us.html">About KU</a></li>
+                                        <li class="menu-item menu-item-has-children"><a href="blog-full-right-sidebar-with-frame.html">Blog</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-has-children"><a href="blog-full-right-sidebar-with-frame.html">Blog Full</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="blog-full-right-sidebar-with-frame.html">Blog Full Right Sidebar With Frame</a></li>
+                                                        <li class="menu-item"><a href="blog-full-left-sidebar-with-frame.html">Blog Full Left Sidebar With Frame</a></li>
+                                                        <li class="menu-item"><a href="blog-full-both-sidebar-with-frame.html">Blog Full Both Sidebar With Frame</a></li>
+                                                        <li class="menu-item"><a href="blog-full-right-sidebar.html">Blog Full Right Sidebar</a></li>
+                                                        <li class="menu-item"><a href="blog-full-left-sidebar.html">Blog Full Left Sidebar</a></li>
+                                                        <li class="menu-item"><a href="blog-full-both-sidebar.html">Blog Full Both Sidebar</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children"><a href="blog-grid-3-columns-no-space.html">Blog Grid</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="blog-grid-2-columns.html">Blog Grid 2 Columns</a></li>
+                                                        <li class="menu-item"><a href="blog-grid-3-columns.html">Blog Grid 3 Columns</a></li>
+                                                        <li class="menu-item"><a href="blog-grid-4-columns.html">Blog Grid 4 Columns</a></li>
+                                                        <li class="menu-item"><a href="blog-grid-2-columns-no-space.html">Blog Grid 2 Columns No Space</a></li>
+                                                        <li class="menu-item"><a href="blog-grid-3-columns-no-space.html">Blog Grid 3 Columns No Space</a></li>
+                                                        <li class="menu-item"><a href="blog-grid-4-columns-no-space.html">Blog Grid 4 Columns No Space</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="menu-item"><a href="standard-post-type.html">Single Post</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children"><a href="#">Contact</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                                <li class="menu-item"><a href="contact-2.html">Contact 2</a></li>
+                                                <li class="menu-item"><a href="contact-3.html">Contact 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children"><a href="portfolio-3-columns.html">Portfolio</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-has-children"><a>Portfolio Grid</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
+                                                        <li class="menu-item"><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
+                                                        <li class="menu-item"><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
+                                                        <li class="menu-item"><a href="portfolio-5-columns.html">Portfolio 5 Columns</a></li>
+                                                        <li class="menu-item"><a href="portfolio-2-columns-with-frame.html">Portfolio 2 Columns With Frame</a></li>
+                                                        <li class="menu-item"><a href="portfolio-3-columns-with-frame.html">Portfolio 3 Columns With Frame</a></li>
+                                                        <li class="menu-item"><a href="portfolio-4-columns-with-frame.html">Portfolio 4 Columns With Frame</a></li>
+                                                        <li class="menu-item"><a href="portfolio-2-columns-no-space.html">Portfolio 2 Columns No Space</a></li>
+                                                        <li class="menu-item"><a href="portfolio-3-columns-no-space.html">Portfolio 3 Columns No Space</a></li>
+                                                        <li class="menu-item"><a href="portfolio-4-columns-no-space.html">Portfolio 4 Columns No Space</a></li>
+                                                        <li class="menu-item"><a href="portfolio-5-columns-no-space.html">Portfolio 5 Columns No Space</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children"><a>Portfolio Masonry</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="portfolio-masonry-4-columns.html">Masonry 4 Columns</a></li>
+                                                        <li class="menu-item"><a href="portfolio-masonry-3-columns.html">Masonry 3 Columns</a></li>
+                                                        <li class="menu-item"><a href="portfolio-masonry-2-columns.html">Masonry 2 Columns</a></li>
+                                                        <li class="menu-item"><a href="portfolio-masonry-4-columns-no-space.html">Masonry 4 Columns No Space</a></li>
+                                                        <li class="menu-item"><a href="portfolio-masonry-3-columns-no-space.html">Masonry 3 Columns No Space</a></li>
+                                                        <li class="menu-item"><a href="portfolio-masonry-2-columns-no-space.html">Masonry 2 Columns No Space</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="menu-item menu-item-has-children"><a class="sf-with-ul-pre" href="singleportfolio.html">Single Portfolio</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+                                        <li class="menu-item"><a href="price-table.html">Price Table</a></li>
+                                        <li class="menu-item"><a href="maintenance.html">Maintenance</a></li>
+                                        <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
+                                        <li class="menu-item"><a href="404.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="bachelor-of-science-in-business-administration.html">Academics</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-has-children"><a>Undergraduate</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="bachelor-of-science-in-business-administration.html">Business Administration</a></li>
+                                                <li class="menu-item"><a href="school-of-law.html">School Of Law</a></li>
+                                                <li class="menu-item"><a href="engineering.html">Engineering</a></li>
+                                                <li class="menu-item"><a href="medicine.html">Medicine</a></li>
+                                                <li class="menu-item"><a href="art-science.html">Art &#038; Science</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children"><a href="#">Graduate Program</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="hospitality-management.html">Hospitality Management</a></li>
+                                                <li class="menu-item"><a href="physics.html">Physics</a></li>
+                                                <li class="menu-item"><a href="#">Chemistry</a></li>
+                                                <li class="menu-item"><a href="#">Music</a></li>
+                                                <li class="menu-item"><a href="#">Computer Science</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children"><a href="#">Resources</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="bachelor-of-science-in-business-administration.html">Department Page</a></li>
+                                                <li class="menu-item"><a href="finance.html">Major Page</a></li>
+                                                <li class="menu-item"><a href="finance-faculty.html">Faculty Page</a></li>
+                                                <li class="menu-item"><a href="john-hagensy-phd.html">Single Instructor</a></li>
+                                                <li class="menu-item"><a href="introduction-to-financial-accounting.html">Single Course</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a href="#">Logo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="apply-to-kingster.html">Admissions</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="apply-to-kingster.html">Apply To Kingster</a></li>
+                                        <li class="menu-item"><a href="campus-tour.html">Campus Tour</a></li>
+                                        <li class="menu-item"><a href="scholarships.html">Scholarships</a></li>
+                                        <li class="menu-item"><a href="athletics.html">Athletics</a></li>
+                                        <li class="menu-item"><a href="give-to-kingster.html">Give To Kingster</a></li>
+                                        <li class="menu-item"><a href="alumni.html">Alumni</a></li>
+                                        <li class="menu-item"><a href="event-calendar.html">Event Calendar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children"><a href="#">Courses</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="course-list-1.html">Course List 1</a></li>
+                                        <li class="menu-item"><a href="course-list-2.html">Course List 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="athletics.html">Athletics</a></li>
+                                <li class="menu-item"><a href="university-life.html">University Life</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kingster-body-outer-wrapper ">
+        <div class="kingster-body-wrapper clearfix  kingster-with-frame">
+            <div class="kingster-top-bar">
+                <div class="kingster-top-bar-background"></div>
+                <div class="kingster-top-bar-container kingster-container ">
+                    <div class="kingster-top-bar-container-inner clearfix">
+                        <div class="kingster-top-bar-left kingster-item-pdlr"><i class="fa fa-envelope-open-o" style="font-size: 15px ;color: #96a2b8 ;margin-right: 8px ;"></i> contact@KUTheme.edu <i class="fa fa-phone" style="font-size: 15px ;color: #96a2b8 ;margin-left: 18px ;margin-right: 6px ;"></i> +1-3435-2356-222</div>
+                        <div class="kingster-top-bar-right kingster-item-pdlr">
+                            <ul id="kingster-top-bar-menu" class="sf-menu kingster-top-bar-menu kingster-top-bar-right-menu">
+                                <li class="menu-item kingster-normal-menu"><a href="#">Alumni</a></li>
+                                <li class="menu-item kingster-normal-menu"><a href="#">Calendar</a></li>
+                                <li class="menu-item kingster-normal-menu"><a href="#">Portal</a></li>
+                            </ul>
+                            <div class="kingster-top-bar-right-social"></div><a class="kingster-top-bar-right-button" href="#" target="_blank">Support KU</a></div>
+                    </div>
+                </div>
+            </div>
+            <header class="kingster-header-wrap kingster-header-style-plain  kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed" data-navigation-offset="75px">
+                <div class="kingster-header-background"></div>
+                <div class="kingster-header-container  kingster-container">
+                    <div class="kingster-header-container-inner clearfix">
+                        <div class="kingster-logo  kingster-item-pdlr">
+                            <div class="kingster-logo-inner">
+                                <a class="" href="index.html"><img src="images/logo.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="kingster-navigation kingster-item-pdlr clearfix ">
+                            <div class="kingster-main-menu" id="kingster-main-menu">
+                                <ul id="menu-main-navigation-1" class="sf-menu">
+                                    <li class="menu-item menu-item-home menu-item-has-children kingster-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-home" data-size="60"><a href="index.html">Homepage 1</a></li>
+                                            <li class="menu-item" data-size="60"><a href="homepage-2.html">Homepage 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item  current-menu-item  menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Pages</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="about-us.html">About KU</a></li>
+                                            <li class="menu-item menu-item-has-children" data-size="60"><a href="blog-full-right-sidebar-with-frame.html" class="sf-with-ul-pre">Blog</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-has-children"><a href="blog-full-right-sidebar-with-frame.html" class="sf-with-ul-pre">Blog Full</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item"><a href="blog-full-right-sidebar-with-frame.html">Blog Full Right Sidebar With Frame</a></li>
+                                                            <li class="menu-item"><a href="blog-full-left-sidebar-with-frame.html">Blog Full Left Sidebar With Frame</a></li>
+                                                            <li class="menu-item"><a href="blog-full-both-sidebar-with-frame.html">Blog Full Both Sidebar With Frame</a></li>
+                                                            <li class="menu-item"><a href="blog-full-right-sidebar.html">Blog Full Right Sidebar</a></li>
+                                                            <li class="menu-item"><a href="blog-full-left-sidebar.html">Blog Full Left Sidebar</a></li>
+                                                            <li class="menu-item"><a href="blog-full-both-sidebar.html">Blog Full Both Sidebar</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children"><a href="blog-grid-3-columns-no-space.html" class="sf-with-ul-pre">Blog Grid</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item"><a href="blog-grid-2-columns.html">Blog Grid 2 Columns</a></li>
+                                                            <li class="menu-item"><a href="blog-grid-3-columns.html">Blog Grid 3 Columns</a></li>
+                                                            <li class="menu-item"><a href="blog-grid-4-columns.html">Blog Grid 4 Columns</a></li>
+                                                            <li class="menu-item"><a href="blog-grid-2-columns-no-space.html">Blog Grid 2 Columns No Space</a></li>
+                                                            <li class="menu-item"><a href="blog-grid-3-columns-no-space.html">Blog Grid 3 Columns No Space</a></li>
+                                                            <li class="menu-item"><a href="blog-grid-4-columns-no-space.html">Blog Grid 4 Columns No Space</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="menu-item"><a href="standard-post-type.html">Single Post</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children" data-size="60"><a href="#" class="sf-with-ul-pre">Contact</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                                    <li class="menu-item"><a href="contact-2.html">Contact 2</a></li>
+                                                    <li class="menu-item"><a href="contact-3.html">Contact 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children" data-size="60"><a href="portfolio-3-columns.html" class="sf-with-ul-pre">Portfolio</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-has-children"><a class="sf-with-ul-pre">Portfolio Grid</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item"><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
+                                                            <li class="menu-item"><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
+                                                            <li class="menu-item"><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
+                                                            <li class="menu-item"><a href="portfolio-5-columns.html">Portfolio 5 Columns</a></li>
+                                                            <li class="menu-item"><a href="portfolio-2-columns-with-frame.html">Portfolio 2 Columns With Frame</a></li>
+                                                            <li class="menu-item"><a href="portfolio-3-columns-with-frame.html">Portfolio 3 Columns With Frame</a></li>
+                                                            <li class="menu-item"><a href="portfolio-4-columns-with-frame.html">Portfolio 4 Columns With Frame</a></li>
+                                                            <li class="menu-item"><a href="portfolio-2-columns-no-space.html">Portfolio 2 Columns No Space</a></li>
+                                                            <li class="menu-item"><a href="portfolio-3-columns-no-space.html">Portfolio 3 Columns No Space</a></li>
+                                                            <li class="menu-item"><a href="portfolio-4-columns-no-space.html">Portfolio 4 Columns No Space</a></li>
+                                                            <li class="menu-item"><a href="portfolio-5-columns-no-space.html">Portfolio 5 Columns No Space</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children"><a class="sf-with-ul-pre">Portfolio Masonry</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item"><a href="portfolio-masonry-4-columns.html">Masonry 4 Columns</a></li>
+                                                            <li class="menu-item"><a href="portfolio-masonry-3-columns.html">Masonry 3 Columns</a></li>
+                                                            <li class="menu-item"><a href="portfolio-masonry-2-columns.html">Masonry 2 Columns</a></li>
+                                                            <li class="menu-item"><a href="portfolio-masonry-4-columns-no-space.html">Masonry 4 Columns No Space</a></li>
+                                                            <li class="menu-item"><a href="portfolio-masonry-3-columns-no-space.html">Masonry 3 Columns No Space</a></li>
+                                                            <li class="menu-item"><a href="portfolio-masonry-2-columns-no-space.html">Masonry 2 Columns No Space</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                 <li class="menu-item menu-item-has-children"><a class="sf-with-ul-pre" href="singleportfolio.html">Single Portfolio</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item" data-size="60"><a href="gallery.html">Gallery</a></li>
+                                            <li class="menu-item" data-size="60"><a href="price-table.html">Price Table</a></li>
+                                            <li class="menu-item" data-size="60"><a href="maintenance.html">Maintenance</a></li>
+                                            <li class="menu-item" data-size="60"><a href="coming-soon.html">Coming Soon</a></li>
+                                            <li class="menu-item" data-size="60"><a href="404.html">404 Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children kingster-mega-menu"><a href="bachelor-of-science-in-business-administration.html" class="sf-with-ul-pre">Academics</a>
+                                        <div class="sf-mega sf-mega-full megaimg">
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-has-children" data-size="15"><a class="sf-with-ul-pre">Undergraduate</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="bachelor-of-science-in-business-administration.html">Business Administration</a></li>
+                                                        <li class="menu-item"><a href="school-of-law.html">School Of Law</a></li>
+                                                        <li class="menu-item"><a href="engineering.html">Engineering</a></li>
+                                                        <li class="menu-item"><a href="medicine.html">Medicine</a></li>
+                                                        <li class="menu-item"><a href="art-science.html">Art &#038; Science</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children" data-size="15"><a href="#" class="sf-with-ul-pre">Graduate Program</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="hospitality-management.html">Hospitality Management</a></li>
+                                                        <li class="menu-item"><a href="physics.html">Physics</a></li>
+                                                        <li class="menu-item"><a href="#">Chemistry</a></li>
+                                                        <li class="menu-item"><a href="#">Music</a></li>
+                                                        <li class="menu-item"><a href="#">Computer Science</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children" data-size="15"><a href="#" class="sf-with-ul-pre">Resources</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="bachelor-of-science-in-business-administration.html">Department Page</a></li>
+                                                        <li class="menu-item"><a href="finance.html">Major Page</a></li>
+                                                        <li class="menu-item"><a href="finance-faculty.html">Faculty Page</a></li>
+                                                        <li class="menu-item"><a href="john-hagensy-phd.html">Single Instructor</a></li>
+                                                        <li class="menu-item"><a href="introduction-to-financial-accounting.html">Single Course</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item" data-size="15">
+                                                    <div class="kingster-mega-menu-section-content"><img src="upload/mega-menu-logo.png" style="margin-bottom: 13px;" alt="" /> <span style="font-size: 14px; font-weight: 500;">Academic offerings include 95 majors, 86 minors, and more than 100 in-major specializations</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="apply-to-kingster.html" class="sf-with-ul-pre">Admissions</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="apply-to-kingster.html">Apply To Kingster</a></li>
+                                            <li class="menu-item" data-size="60"><a href="campus-tour.html">Campus Tour</a></li>
+                                            <li class="menu-item" data-size="60"><a href="scholarships.html">Scholarships</a></li>
+                                            <li class="menu-item" data-size="60"><a href="athletics.html">Athletics</a></li>
+                                            <li class="menu-item" data-size="60"><a href="give-to-kingster.html">Give To Kingster</a></li>
+                                            <li class="menu-item" data-size="60"><a href="alumni.html">Alumni</a></li>
+                                            <li class="menu-item" data-size="60"><a href="event-calendar.html">Event Calendar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Courses</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60"><a href="course-list-1.html">Course List 1</a></li>
+                                            <li class="menu-item" data-size="60"><a href="course-list-2.html">Course List 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item kingster-normal-menu"><a href="athletics.html">Athletics</a></li>
+                                    <li class="menu-item kingster-normal-menu"><a href="university-life.html">University Life</a></li>
+                                </ul>
+                                <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div>
+                            </div>
+                            <div class="kingster-main-menu-right-wrap clearfix ">
+                                <div class="kingster-main-menu-search" id="kingster-top-search"><i class="icon_search"></i></div>
+                                <div class="kingster-top-search-wrap">
+                                    <div class="kingster-top-search-close"></div>
+                                    <div class="kingster-top-search-row">
+                                        <div class="kingster-top-search-cell">
+                                            <form role="search" method="get" class="search-form" action="#">
+                                                <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="s">
+                                                <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
+                                                <input type="submit" class="search-submit" value="Search">
+                                                <div class="kingster-top-search-close"><i class="icon_close"></i></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+
+
+            <div class="kingster-page-title-wrap  kingster-style-medium kingster-center-align" onclick="views(0)" style="cursor:pointer; background-image: url('images/cocurricular/cocurricular.jpg');">
+                <div class="kingster-header-transparent-substitute"></div>
+                <div class="kingster-page-title-overlay"></div>
+                <div class="kingster-page-title-container kingster-container">
+                    <div class="kingster-page-title-content kingster-item-pdlr">
+                        <div class="kingster-page-caption">Pune Institute of Computer Technology</div>
+                        <h1 class="kingster-page-title" style="text-shadow: 2px 4px 4px rgba(0,0,0,0.9);">Co-curricular</h1></div>
+                </div>
+            </div>
+            <div class="kingster-page-wrapper" id="kingster-page-wrapper">
+                <div class="gdlr-core-page-builder-body">
+                    <div class="gdlr-core-pbf-wrapper ">
+                        <div class="gdlr-core-pbf-background-wrap" style="background-color: #f5f5f5 ;"></div>
+                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-portfolio-item gdlr-core-item-pdb clearfix  gdlr-core-portfolio-item-style-grid" style="padding-bottom: 10px ;">
+
+
+
+                                        <div class="gdlr-core-portfolio-item-holder gdlr-core-js-2 filter-container clearfix" data-layout="fitrows">
+
+
+
+                                        <div class="div-array" id="div-array-0">
+
+                                            <!--Left card begin-->
+                                            <div class="gdlr-core-item-list gdlr-core-item-pdlr gdlr-core-column-30 gdlr-core-column-first card" >
+                                                <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-with-frame gdlr-core-js" data-sync-height="portfolio-item-1">
+                                                    <div class="gdlr-core-portfolio-grid-frame gdlr-core-skin-e-background" style="opacity: 1 ;"></div>
+                                                    <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
+                                                        <!--href/onclick--><a href="javascript:views(1)"><div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover">
+                                                        <!--ig--><img src="upload/shutterstock_53600224-400x257.jpg" width="700" height="450"  alt="" /><span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"><span class="gdlr-core-image-overlay-content" ><span class="gdlr-core-portfolio-title gdlr-core-title-font " style="font-size: 18px ;font-weight: 400 ;letter-spacing: 1px ;text-transform: none ;"  >
+                                                            <!--Hover Name-->Impetus and Concepts
+                                                        </span></span>
+                                                            </span>
+                                                        </div></a>
+                                                    </div>
+                                                    <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
+                                                        <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">
+                                                        <!--href/onclick--><a href="javascript:views(1)" >
+                                                            <!--Name-->InC - Impetus and Concepts</a></h3><span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption">
+                                                        <!--Website--><a href="http://www.pictinc.org/" rel="tag" target="_blank"><i class="fa fa-link">&nbsp;</i> www.pictinc.org</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Left card end-->
+
+
+                                            <!--Right card begin-->
+                                            <div class="gdlr-core-item-list class2 gdlr-core-item-pdlr gdlr-core-column-30 card">
+                                                <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-with-frame gdlr-core-js" data-sync-height="portfolio-item-1">
+                                                    <div class="gdlr-core-portfolio-grid-frame gdlr-core-skin-e-background" style="opacity: 1 ;"></div>
+                                                    <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
+                                                        <!--href/onclick--><a href="javascript:views(2)"><div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover"><img src="upload/shutterstock_53600224-400x257.jpg" width="700" height="450"  alt="" /><span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"><span class="gdlr-core-image-overlay-content" ><span class="gdlr-core-portfolio-title gdlr-core-title-font " style="font-size: 18px ;font-weight: 400 ;letter-spacing: 1px ;text-transform: none ;"  >
+                                                            <!--Hover Name-->ROBOCON
+                                                        </span></span>
+                                                            </span>
+                                                        </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
+                                                        <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">
+                                                        <!--href/onclick--><a href="javascript:views(2)" >
+                                                            <!--Name-->ROBOCON</a></h3><span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption">
+                                                        <!--Website-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Right card end-->
+
+                                            <!--Left card begin-->
+                                            <div class="gdlr-core-item-list gdlr-core-item-pdlr gdlr-core-column-30 gdlr-core-column-first card" >
+                                                <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-with-frame gdlr-core-js" data-sync-height="portfolio-item-1">
+                                                    <div class="gdlr-core-portfolio-grid-frame gdlr-core-skin-e-background" style="opacity: 1 ;"></div>
+                                                    <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
+                                                        <!--href/onclick--><a href="javascript:views(3)"><div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover"><img src="upload/shutterstock_53600224-400x257.jpg" width="700" height="450"  alt="" /><span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"><span class="gdlr-core-image-overlay-content" ><span class="gdlr-core-portfolio-title gdlr-core-title-font " style="font-size: 18px ;font-weight: 400 ;letter-spacing: 1px ;text-transform: none ;"  >
+                                                            <!--Hover Name-->PICT IEEE Student Branch
+                                                        </span></span>
+                                                            </span>
+                                                    </div></a>
+                                                    </div>
+                                                    <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
+                                                        <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">
+                                                            <!--href/onclick--><a href="javascript:views(3)" >
+                                                            <!--Name-->PISB - PICT IEEE Student Branch</a></h3><span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption">
+                                                        <!--Website--><a href="http://www.pictieee.in/" rel="tag" target="_blank"><i class="fa fa-link">&nbsp;</i> www.pictieee.in</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Left card end-->
+
+
+                                            <!--Right card begin-->
+                                            <div class="gdlr-core-item-list class2 gdlr-core-item-pdlr gdlr-core-column-30 card">
+                                                <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-with-frame gdlr-core-js" data-sync-height="portfolio-item-1">
+                                                    <div class="gdlr-core-portfolio-grid-frame gdlr-core-skin-e-background" style="opacity: 1 ;"></div>
+                                                    <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
+                                                        <!--href/onclick--><a href="javascript:views(4)"><div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover"><img src="upload/shutterstock_53600224-400x257.jpg" width="700" height="450"  alt="" /><span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"><span class="gdlr-core-image-overlay-content" ><span class="gdlr-core-portfolio-title gdlr-core-title-font " style="font-size: 18px ;font-weight: 400 ;letter-spacing: 1px ;text-transform: none ;"  >
+                                                            <!--Hover Name-->PICT ACM Student Chapter
+                                                        </span></span>
+                                                            </span>
+                                                    </div>
+                                                    </a>
+                                                    </div>
+                                                    <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
+                                                        <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">
+                                                            <!--href/onclick--><a href="javascript:views(4)" >
+                                                            <!--Name-->PASC - PICT ACM Student Chapter</a></h3><span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption">
+                                                        <!--Website--><a href="http://pict.acm.org/" rel="tag" target="_blank"><i class="fa fa-link">&nbsp;</i> pict.acm.org</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Right card end-->
+
+
+                                            <!--Left card begin-->
+                                            <div class="gdlr-core-item-list gdlr-core-item-pdlr gdlr-core-column-30 gdlr-core-column-first card" >
+                                                <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-with-frame gdlr-core-js" data-sync-height="portfolio-item-1">
+                                                    <div class="gdlr-core-portfolio-grid-frame gdlr-core-skin-e-background" style="opacity: 1 ;"></div>
+                                                    <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
+                                                        <!--href/onclick--><a href="javascript:views(5)"><div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover"><img src="upload/shutterstock_53600224-400x257.jpg" width="700" height="450"  alt="" /><span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"><span class="gdlr-core-image-overlay-content" ><span class="gdlr-core-portfolio-title gdlr-core-title-font " style="font-size: 18px ;font-weight: 400 ;letter-spacing: 1px ;text-transform: none ;"  >
+                                                            <!--Hover Name-->PICT CSI Student Branch
+                                                        </span></span>
+                                                            </span>
+                                                    </div></a>
+                                                    </div>
+                                                    <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
+                                                        <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">
+                                                            <!--href/onclick--><a href="javascript:views(5)" >
+                                                            <!--Name-->PCSB - PICT CSI Student Branch</a></h3><span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption">
+                                                        <!--Website-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Left card end-->
+
+
+                                            <!--Right card begin-->
+                                            <div class="gdlr-core-item-list class2 gdlr-core-item-pdlr gdlr-core-column-30 card">
+                                                <div class="gdlr-core-portfolio-grid  gdlr-core-left-align gdlr-core-style-with-frame gdlr-core-js" data-sync-height="portfolio-item-1">
+                                                    <div class="gdlr-core-portfolio-grid-frame gdlr-core-skin-e-background" style="opacity: 1 ;"></div>
+                                                    <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image  gdlr-core-style-title-icon">
+                                                        <!--href/onclick--><a href="javascript:views(6)"><div class="gdlr-core-portfolio-thumbnail-image-wrap  gdlr-core-zoom-on-hover"><img src="upload/shutterstock_53600224-400x257.jpg" width="700" height="450"  alt="" /><span class="gdlr-core-image-overlay  gdlr-core-portfolio-overlay gdlr-core-image-overlay-center-icon gdlr-core-js"><span class="gdlr-core-image-overlay-content" ><span class="gdlr-core-portfolio-title gdlr-core-title-font " style="font-size: 18px ;font-weight: 400 ;letter-spacing: 1px ;text-transform: none ;"  >
+                                                            <!--Hover Name-->PICT IET Student Chapter
+                                                        </span></span>
+                                                            </span>
+                                                    </div>
+                                                    </a>
+                                                    </div>
+                                                    <div class="gdlr-core-portfolio-content-wrap gdlr-core-skin-divider">
+                                                        <h3 class="gdlr-core-portfolio-title gdlr-core-skin-title" style="font-size: 21px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">
+                                                            <!--href/onclick--><a href="javascript:views(6)" >
+                                                            <!--Name-->PISC - PICT IET Student Chapter</a></h3><span class="gdlr-core-portfolio-info gdlr-core-portfolio-info-tag gdlr-core-info-font gdlr-core-skin-caption">
+                                                        <!--Website-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Right card end-->
+
+                                        </div>
+
+                                            <div class="div-array div-arr-hidden" id="div-array-1">
+                                                <div>
+                                                    <div style="width: fit-content;display: inline-block; padding: 20px; margin-bottom: 50px">
+                                                        <img src="images/cocurricular/inc.png" style="width: 90px; height: 90px;">
+                                                    </div>
+                                                    <div style="display: inline-block;position: relative; top: 10px;">
+                                                        <h2>Impetus and Concepts</h2>
+                                                    </div>
+                                                </div>Impetus and Concepts is a technical event organized by PICT. This technical fest has eight events namely-Concepts, Pradnya, Pratibha, Naipunya, Tantra, Lakshya,Daksha and Yukti which will be held on 22nd, 23rd and 24th of March 2019. InC is an intercollegiate national level competition which has been catching the attention of corporate giants for sponsorship as well as guidance to budding entrepreneurs. Every year InC sets a platform for students to design, exhibit and watch their ideas come true. About 2400+ odd students participated from 150+ engineering colleges throughout India last year and we're confident to see even more this year.
+                                                <br><br><br><br><br><br><br><br><br><br>
+                                            </div>
+
+                                            <div class="div-array div-arr-hidden" id="div-array-2">
+                                                <div>
+                                                    <div style="width: fit-content;display: inline-block; padding: 20px; margin-bottom: 50px">
+                                                        <img src="images/cocurricular/inc.png" style="width: 90px; height: 90px;">
+                                                    </div>
+                                                    <div style="display: inline-block;position: relative; top: 10px;">
+                                                        <h2>ROBOCON</h2>
+                                                    </div>
+                                                </div>
+                                                <blockquote><div dir="ltr"><strong>About PICT Robocon Team</strong>:<br><strong><br></strong><strong>PICT has been participating in ABU Robocon since past 8 years. We stood 4th in India in 2014 and 11th in India in 2017.<br></strong><strong>&nbsp;</strong>Students from all classes and departments are welcomed here. Robocon is a&nbsp;place where students can indulge their curiosity and the passion for robotics and dare to go beyond the boundaries of your academics to explore real life applications of their knowledge, learn new technologies and be exposed to national level competitions. The students also get to interact with over 90 colleges from all over the country, learn about designs, ideas and methods.<strong><br></strong><p></p><p>&nbsp;</p><p><strong>Technologies that we use and have used:</strong></p><ul><li>Pneumatic systems<strong> for actuation.</strong></li><li><strong>Automated Systems for robots.</strong></li><li><strong>Brushless DC motors.<br></strong></li><li><strong>High power Motor Drivers and reliable sensors for autonomous operation.</strong></li><li><strong>Servo motors for precise movements.</strong></li><li><strong>ATMEGA2560 </strong>micro-controller.</li><li>Arduino Uno, Mega etc micro-controllers.<strong><br></strong></li><li><strong>Compass Module for navigation.</strong></li><li><strong>Electronic Duct Fans (EDFs) for thrust and indirect energy transfer.</strong></li><li><strong>Pixy for object detection based on colour.</strong></li><li><strong>PID Based control system.</strong></li><li><strong>Kinect for </strong>Digital Image Processing, Depth Sensing and Object tracking and Path detection and prediction of moving objects.</li><li>Multiple servo based mechanisms for gripping and moving static objects.</li></ul></div></blockquote><div dir="ltr"><p>&nbsp;</p></div><div dir="ltr"><p><strong>Robocon</strong> is an annual event which requires preparation,work and testing to be carried out for atleast 10 months a year. The team holds its introductory seminars and selection process for the interested third, second and first year students in the months of July and August-September respectively.</p></div><div dir="ltr"><p align="justify">In 2014, the theme was ‘A salute to parenthood’. We were challenged to make robots which performed tasks of playing see-saw, swing and jungle gym. One of the robots, which was also called as parent robot, had to be manually controlled while the other one, called as a child robot, had to work autonomously.</p><p align="justify">In 2015, the theme was ‘Robominton’. The theme demanded us to build robots that could play a doubles game of badminton on a real sized court. The robots could either manually controlled or autonomously working.</p><p>In 2016, the theme was “Clean Energy Recharging the world”. The theme is to move a robot(eco-bot) through indirect energy transfer using another robot (Hybrid bot) through a given path, pick up a component from the eco-bot at the end of the path, climb the pole using the hybrid bot and place the picked up component at the top of the pole completing a windmill.</p><p>In 2017, the theme was “Asobi: The Landing Disc”. The theme resolves around the world “asobi” (play), which is also a fundamental philosophy behind robocon. In “asobi”, playful, unique, original show of skills is often more important than winning or losing, as everyone – friend and foe alike – can applaud and enjoy them. So, in the “asobi” spirit: we encorage playful, unique, original robot designs and strategies!</p><p>Tentative Dates of <strong>Robocon</strong> for every academic year.</p></div><div dir="ltr"><blockquote><div dir="ltr"><p>Third year seminar and selection process : Month of July</p><p>Release of Robocon Theme and Tasks: Month end of August</p><p>Second and First year introductory seminar and selection process : In the months of August &amp; September.</p><p>&nbsp;</p><p>&nbsp;</p></div></blockquote></div><p>&nbsp;</p><p style="color: red; text-align: right;"><em><strong>Last updated: September 14, 2017 at 9:22 am</strong></em></p>
+                                            </div>
+
+                                            <div class="div-array div-arr-hidden" id="div-array-3">
+                                                <div>
+                                                    <div style="width: fit-content;display: inline-block; padding: 20px; margin-bottom: 50px">
+                                                        <img src="images/cocurricular/pisb.jpg" style="width: 90px; height: 90px;">
+                                                    </div>
+                                                    <div style="display: inline-block;position: relative; top: 10px;">
+                                                        <h2>PICT IEEE Student Branch</h2>
+                                                    </div>
+                                                </div>
+                                                <p><b>About IEEE</b></p><p><b>IEEE</b><span style="font-weight: 400;">, abbreviation of&nbsp;</span><b>I</b><span style="font-weight: 400;">nstitute of&nbsp;</span><b>E</b><span style="font-weight: 400;">lectrical and&nbsp;</span><b>E</b><span style="font-weight: 400;">lectronics&nbsp;</span><b>E</b><span style="font-weight: 400;">ngineers is the world’s largest professional association dedicated to advancing technological innovation and excellence for the benefit of humanity. IEEE and its members are highly regarded for their publications and conferences in professional and educational activities.</span></p><p><span style="font-weight: 400;">The following information provides an overview of IEEE offerings and services.</span></p><p><b>IEEE Quick Facts</b></p><p><span style="font-weight: 400;">IEEE has:</span></p><ul><li style="font-weight: 400;"><span style="font-weight: 400;">2,669 student branches at colleges and universities in 80 countries;</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">334 Sections in ten geographic Regions worldwide;</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">more than 426,000 members in more than 160 countries, more than 50 percent of whom are from outside the United States;</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">more than 117,000 Student members;</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">2,116 Chapters that unite local members with similar technical interests;</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">922 student branch chapters of IEEE technical societies;</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">440 affinity groups;</span></li></ul><p><span style="font-weight: 400;">IEEE Affinity Groups are non-technical sub-units of one or more Sections or a Council. The Affinity Group patent entities are the IEEE-USA Consultants’ Network, Young Professionals (YP), Women in Engineering (WIE), and Life Members (LM).</span></p><p><strong>Office Bearers:</strong></p><div align="center"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="center"><b>Designation</b></p></td><td></td><td>Name</td></tr><tr><td><p align="center"><b>Counselor</b></p></td><td></td><td>Dr. R.B. Ingle</td></tr><tr><td><p align="center"><b>Chairperson</b></p></td><td></td><td>Shivam Gupta</td></tr><tr><td><p align="center"><b>Vice-Chairperson</b></p></td><td></td><td>Rishabh Patil</td></tr></tbody></table></div><p>&nbsp;</p><p><b>&nbsp;Visit:&nbsp;<a target="_blank" rel="nofollow" href="https://pict.edu/goto/http://www.pictieee.org/">http://www.pictieee.org/</a></b></p><p><strong>PICT IEEE Student Branch publishes a newsletter every 6 months called P.I.N.G.</strong></p><p><strong>The Student Branch conducts an event per semester:</strong></p><ul><li>Credenz (Semester I)</li><li>Credenz Tech Dayz (Semester II)</li></ul><p>&nbsp;</p><p><b>Credenz </b></p><p><b><a target="_blank" rel="nofollow" href="https://pict.edu/goto/http://www.credenz.info/" class="broken_link">(http://www.credenz.info</a>)</b></p><p><span style="font-weight: 400;">PICT IEEE Student Branch (PISB), one of the most active student branches of IEEE, is a proud host of the annual technical event Credenz. It is one of the most innovative scientific technical and management events held in August each year. It is organized exclusively by students of PISB. It has grown manifold since its inception in 2004, and has made a name for itself as a technical renaissance showcasing the young emerging minds of technocrats and administrators. Through its deluge of competitions, lectures, exhibitions and workshops Credenz endeavours to enkindle the minds of thousands of students visiting annually. Over the years, it has attracted the connoisseurs of engineering and technology.</span></p><p><span style="font-weight: 400;">Credenz represents zenith of science and engineering in a landscape of future visionaries and scientists. From thrilling competitions to the enriching workshops, every bit promises to be a fulfilling experience. Workshops conducted by experts for the budding engineers, seminars conducted by aficionados on upcoming technologies were focal points of the event. The event has been a symposium of young minds from numerous colleges across the nation to participate in innovative events and inculcate new technicalities.</span></p><p><span style="font-weight: 400;">We, members of PISB, carry with us an unrelinquishable fire and an indomitable determination to make CREDENZ a world-class event.</span></p><p>&nbsp;</p><p><b>Credenz Tech Dayz (CTD)</b></p><p><span style="font-weight: 400;">(<a target="_blank" rel="nofollow" href="https://pict.edu/goto/http://ctd.credenz.info" class="broken_link">ctd.credenz.info</a>)</span></p><p><span style="font-weight: 400;">Credenz Tech Dayz(CTD) is organized by the PICT IEEE Student Branch annually, in the even semester, to coincide with the IEEE membership drive. CTD brings with it a gusto that is portrayed in the form of seminars by esteemed industrialists. These seminars provide a platform wherein the students are exposed to the latest innovations in technology. They also get an opportunity to interact with experts from the industry, thus giving them further insights into and helping them to develop their skills in the technical field.</span></p><p><span style="font-weight: 400;">Many seminars were organized as a part of CTD’15. Experts from companies like IDEA Cellular, Airtight Networks, Tech Mahindra shared their knowledge with us. The seminars on “Robotics”, “Android App Studio” and “Gaming and Related Technologies” drew deep interest from the students, while those on “Wifi and IoT” and “Telecommunication unfolding” were also immensely appreciated. The seminars on areas like “3D-printing” and “Big Data” shed light on concepts heard by all but known to very few. A seminar on “start-up” was useful for learning more about how a business is initiated and works.</span></p><p>&nbsp;</p><p><strong>PING:</strong></p><p><span style="font-weight: 400;">P.I.N.G. is made by a group of zesty individuals, driven by a common purpose of reflecting the present-day youth’s insight on the technical advancements. It showcases a diverse array of topics stretched over the entire confines of technicalities. It provides its readers with a source of inspiration in the form of interviews of reputable people, talking about their commendable lives. It is a contribution, such as it is, to the technical society. The magazine is aimed at making the experience of its reader, an absolute delight and informative at the same time. It is PISB’s effort, as a technical organization, towards bridging the gap between who’s who of the technical world and the technology-centered students.</span></p><p><span style="font-weight: 400;">P.I.N.G. has tried to push the envelope in every technical front. Every successive issue includes an informative new feature as an endeavour to better the reader’s experience of the previous issue. It is known for its perpetual desire of experimenting and indomitable dedication towards the technical realm, yielding a cognitive and smooth read invariably. Over the years, P.I.N.G. has been appreciated by students, teachers and technical personnel. The contribution of the authors, the suggestions of the readers and the guidance by fellow PISB members have made it possible for the P.I.N.G. issues to deliver. We, the members of PISB, aspire for P.I.N.G. to be a world-class magazine and live up to all the expectations in the consequent years.</span></p><p><a href="https://pict.edu/wp-content/uploads/2015/09/ping11.0.jpg" data-gal="prettyPhoto[13418]"><img class="alignnone size-medium wp-image-14189" src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_212,h_300/https://pict.edu/wp-content/uploads/2015/09/ping11.0-212x300.jpg" alt="ping11.0" width="212" height="300"></a></p><p><a target="_blank" rel="nofollow" href="https://pict.edu/goto/https://drive.google.com/file/d/0B_DeRAgrBI6ZZjg2Vjl4NjlXTVJGZGtVcXA4YlpRMFRhRUtv/view?usp=sharing">Latest PING Edition</a></p><p></p>
+                                            </div>
+
+
+                                            <div class="div-array div-arr-hidden" id="div-array-4">
+                                                <div>
+                                                    <div style="width: fit-content;display: inline-block; padding: 20px; margin-bottom: 50px">
+                                                        <img src="images/cocurricular/pasc.jpg" style="width: 90px; height: 90px;">
+                                                    </div>
+                                                    <div style="display: inline-block;position: relative; top: 10px;">
+                                                        <h2>PICT ACM Student Chapter</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="description"><p>&nbsp;</p><p><span style="color: #222222;"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">PICT ACM Student Chapter(PASC) was started in March 2011 with a vision to carry on ACM International’s intentions on a grass root level in PICT. PASC was founded with initial team of 4 members and as of now it is PASC is kept active by nearly 220 ACM members. We aim to provide opportunities to students by organizing world-class seminars, lectures, and workshops to meet peers and experts in their fields of interest. Every year an event known as ‘PULZION’ is organized by members of PASC to offer platform for students to showcase their talents in technical and non-technical fields.</span></span></span></p><p><span style="color: #222222;"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">Our mission is to offer students an opportunity to learn, innovate and growinto intellectuals, visionaries, and technocrats, who work to promote the advancement of science and technology.</span></span></span></p><p><span style="color: #222222;"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">Every year we impart knowledge to hundreds of students and help them understand how they can contribute to the field of computing science. We conduct several technical events in a year. We nurture the growth of inquisitive minds by providing them with the toolkit to excel in various fields.</span></span></span></p><p><span style="color: #222222;"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">The chapter organizes seminars and workshops on different domains by speakers who are well-known in their fields, which give students opportunities to learn about advanced research subjects. The chapter activities include events, seminars, competitions, academia-industry initiatives and various ventures to promote knowledge sharing and innovation.</span></span></span></p><p><span style="color: #222222;"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">Know more about us below.</span></span></span></p><p><span style="color: #222222;"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">ACM : <a href="http://india.acm.org" target="_blank"> http://india.acm.org </a></span></span></span></p><p><span style="color: #222222;"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">PASC : <a href="http://pict.acm.org" target="_blank"> http://pict.acm.org</a></span></span></span></p><p>Facebook Page : <a target="_blank" rel="nofollow" href="https://pict.edu/goto/https://www.facebook.com/acmpict/"><span style="font-family: Verdana,serif;"><span style="font-size: medium;">https://www.facebook.com/acmpict/</span></span></a></p></div><p><a href="https://pict.edu/wp-content/uploads/2015/12/acm.jpg" data-gal="prettyPhoto[14194]"><img class="alignnone size-medium wp-image-14200" src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_267/https://pict.edu/wp-content/uploads/2015/12/acm-267x300.jpg" alt="acm" width="267" height="300" srcset="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_267/https://pict.edu/wp-content/uploads/2015/12/acm-267x300.jpg 267w, https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_401/https://pict.edu/wp-content/uploads/2015/12/acm.jpg 401w" sizes="(max-width: 267px) 100vw, 267px"></a></p><p><a target="_blank" rel="nofollow" href="https://pict.edu/goto/https://www.dropbox.com/s/c9w2fs4ufr2uk93/authenTECH.pdf?x52545">View Magazine</a></p><p>&nbsp;</p><p style="color: red; text-align: right;"><em><strong>Last updated: September 14, 2017 at 9:14 am</strong></em></p>
+                                            </div>
+
+                                            <div class="div-array div-arr-hidden" id="div-array-5">
+                                                <div>
+                                                    <div style="width: fit-content;display: inline-block; padding: 20px; margin-bottom: 50px">
+                                                        <img src="images/cocurricular/inc.png" style="width: 90px; height: 90px;">
+                                                    </div>
+                                                    <div style="display: inline-block;position: relative; top: 10px;">
+                                                        <h2>PICT CSI Student Branch</h2>
+                                                    </div>
+                                                </div>
+                                                <hr><p align="JUSTIFY"><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">Pune Institute of Computer Technology (PICT) CSI Student Branch was established in 2016 with an objective to facilitate research, knowledge sharing, learning and career enhancement for the students, while simultaneously inspiring and nurturing new entrants into the industry and helping them to integrate into the IT Community.</span></span></span></p><p align="JUSTIFY"><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">PCSB works under </span></span></span><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;"><b>Computer Society of India (CSI) </b></span></span></span><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">to provide latest technology related knowledge to students. PCSB started with 147 student members in academic year 2016-2017.</span></span></span></p><p align="JUSTIFY"><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">PCSB arranges events like Codeventure, Blind coding and different types of workshops (conducted by industry experts) throughout the year.. PCSB also arranges </span></span></span><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;"><i><b>Enthusia’</b></i></span></span></span><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;"> every year. </span></span></span></p><p><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">Know more about us :-</span></span></span></p><p><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">CSI : </span></span></span><span style="color: #1155cd;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">http://www.csi-india.org</span></span></span></p><p><span style="color: #000000;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">Facebook : </span></span></span><span style="color: #1155cd;"><span style="font-family: Times New Roman,serif;"><span style="font-size: large;">http://www.facebook.com/csipict</span></span></span></p>
+                                            </div>
+
+                                            <div class="div-array div-arr-hidden" id="div-array-6">
+                                                <div>
+                                                    <div style="width: fit-content;display: inline-block; padding: 20px; margin-bottom: 50px">
+                                                        <img src="images/cocurricular/inc.png" style="width: 90px; height: 90px;">
+                                                    </div>
+                                                    <div style="display: inline-block;position: relative; top: 10px;">
+                                                        <h2>PICT IET Student Chapter</h2>
+                                                    </div>
+                                                </div>
+                                                <p><span style="font-weight: 400;">Since <strong>PISC</strong>‘s inception in 2012, the PICT IET Student Chapter (PISC) has always aimed at preparing students and providing them with that extra edge for success in the professional world they step into. The chapter offers a plethora of opportunities to its student body to hone their technical skills and with a speedy growth, PISC has now gone on to become the largest student chapter in the state.</span></p><p><span style="font-weight: 400;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PICT IET Student Chapter have been actively involved in organising various activities ,events to cater technical nourishment of its memers. Also PISC has been in the forefront to organize different events &amp; seminars for engineering students in Pune. PISC conducts the technical event ‘Scientia’ annually.</span></p><p>&nbsp;</p><p><b>Explore the benefits of IET membership</b></p><p>–A global repository of deep knowledge resources and engineering intelligence<br>–Member Recognition, Opportunities &amp; Privileges<br>–Stand out from the crowd with International Professional Registration<br>–Member Support</p><p><b>A global repository of deep knowledge resources and engineering intelligence</b></p><p>–24×7, worldwide, free access to Virtual Library<br>–90,000 abstracts on IET Digital Library (IDL) + 5 downloads<br>–5 Free Downloads from IET Knowledge Packs (a single article or chapter from over 400 eBooks, over 1,300 conference publications, and over 70,000 journal articles) .<br>–Knowledge Packs – £25 for 25 Downloads from IET Digital Library<br>–Access to digital version of award-winning E&amp;T magazine If you would like to opt for the printed magazine at additional cost, please write to india@theiet.in<br>–Access to technology channels on IET.tv for Communications, Control, Electronics, IT, Management, Manufacturing, Power and Transport<br>–35% off on all 400 IET Books; 20% off all 26 IET Journals; 15% off on author fees for Journal of Engineering (JoE)</p><p><b>Member Recognition, Opportunities &amp; Privileges</b></p><p>–Member Achievements showcased in India member publications and on India and global websites<br>–Apply for Professional Registration and join a global league of engineers<br>–Network and collaborate with leaders and subject matter experts<br>–Right to use MIET after your name<br>–Opportunity to play a larger role as IET Local Network Office Bearer<br>–Speaking, Mentoring, Advisory and Volunteering roles for Members<br>–IET events – free or discounted for Members</p><p><b>Member Support</b></p><p>–IET Advantage Job Fair exclusively for IET student members, fresh graduates and young professionals<br>–IET Advantage Programme – career support for first six years at discounted membership<br>–Receive Mentoring and Guidance<br>–IET Connect – Benevolent Fund<br>–Scholarships for student engineers</p><p>&nbsp;</p><p><a target="_blank" rel="nofollow" href="https://pict.edu/goto/http://www.theiet.org/membership/">Click here for Membership</a></p><p>&nbsp;</p><hr><p><strong>Epictomize:</strong></p><p><span style="font-weight: 400;">(<strong>IET Magazine</strong>) &nbsp; &nbsp;</span> <span style="font-weight: 400;">&nbsp;&nbsp;&nbsp; </span> <span style="font-weight: 400;">&nbsp;&nbsp;&nbsp; </span></p><p><span style="font-weight: 400;">PISC launched its first annual technical magazine “ePICTomize” during Scientia ’14. The theme for the first issue was SPEED. The magazine contained articles on various topics ranging from science, technology and entertainment to sports and video games. Most of the articles were submitted by students with a special article from Volkswagen India. The magazine also contained an interview of Mr Shripad Yawalkar, Chemical Weapons Inspector, OPCW. It also contained a section based on the activities conducted by PISC. The highlight of the magazine was that, keeping in mind the wastage of paper that occurs in printing, we launched the e-copy of the magazine on various platforms. ePICTomize ’15 with the theme of Dimensions was launched on 12</span><span style="font-weight: 400;">th</span><span style="font-weight: 400;"> of September during inauguration of our flagship event Scientia ’15. The magazine is available on </span><a target="_blank" rel="nofollow" href="https://pict.edu/goto/http://www.scientia15.com" class="broken_link"><span style="font-weight: 400;">www.scientia15.com</span></a></p><p><a target="_blank" rel="nofollow" href="https://pict.edu/goto/http://www.scientia15.com/data/epictomize15.pdf" class="broken_link"><img class="alignnone size-medium wp-image-14211" src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_211,h_300/https://pict.edu/wp-content/uploads/2015/12/iet_m-211x300.png" alt="iet_m" width="211" height="300"></a></p><p>&nbsp;</p><p style="color: red; text-align: right;"><em><strong>Last updated: December 16, 2016 at 7:00 am</strong></em></p>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="floating-btns-wrapper" style="display: none;">
+                <div class="floating-btns-container">
+                    <div onclick="views(1)" data-toggle="tooltip" title="Impetus and Concepts" data-placement="top" class="floating-btns" style="background-image: url('images/cocurricular/inc.png')"></div>
+                    <div onclick="views(2)" data-toggle="tooltip" title="ROBOCON" class="floating-btns" data-placement="top" style="background-image: url('images/cocurricular/inc.png')"></div>
+                    <div onclick="views(3)" data-toggle="tooltip" title="PISB" class="floating-btns" data-placement="top" style="background-image: url('images/cocurricular/pisb.jpg')"></div>
+                    <div onclick="views(4)" data-toggle="tooltip" title="PASC" class="floating-btns" data-placement="top" style="background-image: url('images/cocurricular/pasc.jpg')"></div>
+                    <div onclick="views(5)" data-toggle="tooltip" title="PCSB" class="floating-btns" data-placement="top" style="background-image: url('images/cocurricular/inc.png')"></div>
+                    <div onclick="views(6)" data-toggle="tooltip" title="PISC" class="floating-btns" data-placement="top" style="background-image: url('images/cocurricular/inc.png')"></div>
+                </div>
+            </div>
+
+
+            <footer>
+                <div class="kingster-footer-wrapper ">
+                    <div class="kingster-footer-container kingster-container clearfix">
+                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                            <div id="text-2" class="widget widget_text kingster-widget">
+                                <div class="textwidget">
+                                    <p><img src="upload/footer-logo.png" alt="" />
+                                        <br /> <span class="gdlr-core-space-shortcode" style="margin-top: 5px ;"></span>
+                                        <br /> Box 35300
+                                        <br /> 1810 Campus Way NE
+                                        <br /> Bothell, WA 98011-8246</p>
+                                    <p><span style="font-size: 15px; color: #ffffff;">+1-2534-4456-345</span>
+                                        <br /> <span class="gdlr-core-space-shortcode" style="margin-top: -20px ;"></span>
+                                        <br /> <a style="font-size: 15px; color: #ffffff;" href="mailto:admin@kingsteruni.edu">admin@kingsteruni.edu</a></p>
+                                    <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-left-align">
+                                        <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #3db166 ;border-bottom-width: 2px ;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                            <div id="gdlr-core-custom-menu-widget-2" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                                <h3 class="kingster-widget-title">Our Campus</h3><span class="clear"></span>
+                                <div class="menu-our-campus-container">
+                                    <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                        <li class="menu-item"><a href="#">Acedemic</a></li>
+                                        <li class="menu-item"><a href="#">Planning &#038; Administration</a></li>
+                                        <li class="menu-item"><a href="#">Campus Safety</a></li>
+                                        <li class="menu-item"><a href="#">Office of the Chancellor</a></li>
+                                        <li class="menu-item"><a href="#">Facility Services</a></li>
+                                        <li class="menu-item"><a href="#">Human Resources</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                            <div id="gdlr-core-custom-menu-widget-3" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                                <h3 class="kingster-widget-title">Campus Life</h3><span class="clear"></span>
+                                <div class="menu-campus-life-container">
+                                    <ul id="menu-campus-life" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                        <li class="menu-item"><a href="#">Accessibility</a></li>
+                                        <li class="menu-item"><a href="#">Financial Aid</a></li>
+                                        <li class="menu-item"><a href="#">Food Services</a></li>
+                                        <li class="menu-item"><a href="#">Housing</a></li>
+                                        <li class="menu-item"><a href="#">Information Technologies</a></li>
+                                        <li class="menu-item"><a href="#">Student Life</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                            <div id="gdlr-core-custom-menu-widget-4" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                                <h3 class="kingster-widget-title">Academics</h3><span class="clear"></span>
+                                <div class="menu-academics-container">
+                                    <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                        <li class="menu-item"><a href="#">Canvas</a></li>
+                                        <li class="menu-item"><a href="#">Catalyst</a></li>
+                                        <li class="menu-item"><a href="#">Library</a></li>
+                                        <li class="menu-item"><a href="#">Time Schedule</a></li>
+                                        <li class="menu-item"><a href="#">Apply For Admissions</a></li>
+                                        <li class="menu-item"><a href="#">Pay My Tuition</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+				<div class="kingster-copyright-wrapper">
+					<div class="kingster-copyright-container kingster-container clearfix">
+						<div class="kingster-copyright-left kingster-item-pdlr">Copyright All Right Reserved 2019, Max Themes</div>
+						<div class="kingster-copyright-right kingster-item-pdlr">
+							<div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;">
+								<a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook">
+									<i class="fa fa-facebook" ></i>
+								</a>
+								<a href="#" target="_blank" class="gdlr-core-social-network-icon" title="google-plus">
+									<i class="fa fa-google-plus" ></i>
+								</a>
+								<a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin">
+									<i class="fa fa-linkedin" ></i>
+								</a>
+								<a href="#" target="_blank" class="gdlr-core-social-network-icon" title="skype">
+									<i class="fa fa-skype" ></i>
+								</a>
+								<a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter">
+									<i class="fa fa-twitter" ></i>
+								</a>
+								<a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram">
+									<i class="fa fa-instagram" ></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+            </footer>
+        </div>
+    </div>
+
+
+	<script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+    <script type='text/javascript'>
+        var gdlr_core_pbf = {
+            "admin": "",
+            "video": {
+                "width": "640",
+                "height": "360"
+            },
+            "ajax_url": "#"
+        };
+    </script>
+    <script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+    <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+    <script type='text/javascript'>
+        var kingster_script_core = {
+            "home_url": "index.html"
+        };
+    </script>
+    <script type='text/javascript' src='js/plugins.min.js'></script>
+    <script type='text/javascript' src='js/isotope.js'></script>
+</body>
+</html>
