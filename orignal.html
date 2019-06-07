@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link href="https://unpkg.com/nanogallery2@2.4.1/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://unpkg.com/nanogallery2@2.4.1/dist/jquery.nanogallery2.min.js"></script>
+
+  </head>
+  <body>
+
+    <h1>gallery made with nanogallery2</h1>
+
+    <div id="nanogallery2" data-nanogallery2='{
+      "kind":             "nano_photos_provider2",
+      "dataProvider":     "http://pictoreal.in/admin/nano_photos_provider2/nano_photos_provider2.php",
+      "thumbnailHeight":           210, "thumbnailWidth": 210,
+        "thumbnailL1GutterWidth":    0,
+        "thumbnailL1GutterHeight":   40,
+        
+        "thumbnailStacks":           4,
+        "thumbnailStacksTranslateZ": 0.3,
+        "thumbnailStacksRotateX":    0.9,
+        "galleryBuildInit2":         "perspective_900px|perspective-origin_50% 150%",
+        "thumbnailHoverEffect2":     "thumbnail_translateZ_0px_100px_easeOutQuad_400 | thumbnail_rotateX_0deg_10deg_easeOutBack_200 | thumbnail_rotateX_10deg_0deg_delay250_keyframe_hoverin_easeOutBack_400"
+      }'>
+      
+    </div>
+  </body>
+</html>
