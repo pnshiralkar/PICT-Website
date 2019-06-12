@@ -35,8 +35,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="script.js"></script>
 
-
-    <style>
+ <style>
 
         html{
             scroll-behavior: smooth;
@@ -178,43 +177,11 @@
 
 
     </style>
-    <script>
-    $(document).ready(function () {
-        $('.msg-bg').attr("style", "height: " + $('.msg').height() + "px;");
-        console.log($('.msg').height());
-    });
+   
 
-    $(window).scroll(function () {
-        if($(window).scrollTop()>200){
-            $('#btn_top').attr("class", "btn_top bg-dark text-center");
-        }
-        if($(window).scrollTop()<200){
-            $('#btn_top').attr("class", "btn_top bg-dark text-center btn_top_hide");
-        }
-    });
-
-    $(window).on("load", function () {
-        $("#preloader-left").attr("class", $("#preloader-left").attr("class") + " preloader-loaded");
-        $("#preloader-right").attr("class", $("#preloader-right").attr("class") + " preloader-loaded");
-        $("#preloader-cont").attr("class", $("#preloader-cont").attr("class") + " preloader-cont-loaded");
-    });
-
-</script>
 
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
-<div class="container-fluid preloader" id="preloader">
-    <div class="preloader-left" id="preloader-left">
-
-    </div>
-    <div class="preloader-right" id="preloader-right">
-        
-    </div>
-    <div class="preloader-cont text-muted text-center" id="preloader-cont">
-        <img src="images/logo-pre.png" class="preloader-logo" id="preloader-logo"/>
-        <p>Loading...</p>
-    </div>
-</div>
 
 
 
