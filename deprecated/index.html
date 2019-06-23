@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pune Instiute of Computer Technology</title>
+
+    <!--    favicon to be cropped-->
+    <link rel="icon" href="images/icon.jpg" sizes="32x32"/>
+    <link rel="icon" href="images/icon.jpg" sizes="192x192"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.jpg"/>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--Theme-->
+    <link rel='stylesheet' href='plugins/goodlayers-core/plugins/combine/style.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='plugins/goodlayers-core/include/css/page-builder.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='plugins/revslider/public/assets/css/settings.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='css/style-core.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='css/kingster-style-custom.css' type='text/css' media='all'/>
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&amp;subset=latin%2Clatin-ext%2Cdevanagari&amp;ver=5.0.3' type='text/css' media='all'/>
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="css/cards.css">
+
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+    <style>
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .msg{
+            margin: 40px 2%;
+            position: relative;
+            width: 96%;
+            text-align: center;
+            height: fit-content;
+            border: 2px black solid;
+        }
+        .msg-bg{
+            position: absolute;
+            z-index: -1;
+            top: 0px;
+            left: 0px;
+            filter: blur(3px);
+            width: 100%;
+            border: 1px black solid;
+        }
+        .msg-img{
+            position: relative;
+            width: 22%;
+            border: black 5px;
+            border-radius: 50%;
+            margin-top: 30px;
+            box-shadow: 0 0px 19px 0 rgba(0,0,0,0.4), 0 7px 15px 0 rgba(0,0,0,0.9);
+        }
+        .msg-txt{
+            position: relative;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: white;
+            font-size: x-large;
+            text-shadow: 1px 1px rgba(0,0,0,0.8);
+        }
+
+        .msg-name{
+            color: white;
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: x-large;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px rgba(0,0,0,0.8);
+        }
+
+        .msg-position{
+            margin-top: 0;
+            position: relative;
+            color: white;
+            font-size: large;
+            margin-bottom: 60px;
+            text-shadow: 1px 1px #000000;
+        }
+
+        .preloader{
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .preloader-left{
+            position: absolute;
+            background: black;
+            top: 0;
+            left: 0;
+            width: 51vw;
+            height: 100vh;
+            z-index: 1001;
+            transition: all 0.7s;
+        }
+
+        .preloader-right{
+            position: absolute;
+            background: black;
+            top: 0;
+            right: 0;
+            width: 51vw;
+            height: 100vh;
+            z-index: 1001;
+            transition: all 0.7s;
+        }
+
+        .preloader-cont{
+            position: absolute;
+            top:50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            z-index: 1002;
+            opacity: 1;
+            transition: all 0.4s;
+            font-size: larger;
+        }
+        
+        .preloader-logo{
+            width: 12vw;
+            transition: all 0.4s;
+        }
+
+        .btn_top{
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            opacity: 0.4;
+            font-size: 3rem;
+            z-index: 999;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        .btn_top_hide{
+            opacity: 0;
+            cursor: default;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+
+
+        .preloader-loaded{
+            width: 0;
+            opacity: 0;
+        }
+
+        .preloader-cont-loaded{
+            opacity: 0;
+        }
+
+
+
+    </style>
+    <script>
+    $(document).ready(function () {
+        $('.msg-bg').attr("style", "height: " + $('.msg').height() + "px;");
+        console.log($('.msg').height());
+    });
+
+    $(window).scroll(function () {
+        if($(window).scrollTop()>200){
+            $('#btn_top').attr("class", "btn_top bg-dark text-center");
+        }
+        if($(window).scrollTop()<200){
+            $('#btn_top').attr("class", "btn_top bg-dark text-center btn_top_hide");
+        }
+    });
+
+    $(window).on("load", function () {
+        $("#preloader-left").attr("class", $("#preloader-left").attr("class") + " preloader-loaded");
+        $("#preloader-right").attr("class", $("#preloader-right").attr("class") + " preloader-loaded");
+        $("#preloader-cont").attr("class", $("#preloader-cont").attr("class") + " preloader-cont-loaded");
+    });
+
+</script>
+
+</head>
+<body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
+<div class="container-fluid preloader" id="preloader">
+    <div class="preloader-left" id="preloader-left">
+
+    </div>
+    <div class="preloader-right" id="preloader-right">
+        
+    </div>
+    <div class="preloader-cont text-muted text-center" id="preloader-cont">
+        <img src="images/logo-pre.png" class="preloader-logo" id="preloader-logo"/>
+        <p>Loading...</p>
+    </div>
+</div>
+
+
+
+<a href="javascript: scrollTo(0,0)">
+    <div class="btn_top bg-dark text-center btn_top_hide" id="btn_top">
+        <i class="fas fa-angle-up text-white" style="transform: translateY(-22%);"></i>
+    </div>
+</a>
+
+
+<div class="kingster-mobile-header-wrap">
+    <div class="kingster-mobile-header kingster-header-background kingster-style-slide kingster-sticky-mobile-navigation "
+         id="kingster-mobile-header">
+        <div class="kingster-mobile-header-container kingster-container clearfix">
+            <div class="kingster-logo  kingster-item-pdlr">
+                <div class="kingster-logo-inner">
+                    <a class="" href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+            </div>
+            <div class="kingster-mobile-menu-right">
+                <div class="kingster-main-menu-search" id="kingster-mobile-top-search"><i class="fa fa-search"></i>
+                </div>
+                <div class="kingster-top-search-wrap">
+                    <div class="kingster-top-search-close"></div>
+                    <div class="kingster-top-search-row">
+                        <div class="kingster-top-search-cell">
+                            <form role="search" method="get" class="search-form" action="#">
+                                <input type="text" class="search-field kingster-title-font" placeholder="Search..."
+                                       value="" name="s">
+                                <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
+                                <input type="submit" class="search-submit" value="Search">
+                                <div class="kingster-top-search-close"><i class="icon_close"></i></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="kingster-mobile-menu"><a
+                        class="kingster-mm-menu-button kingster-mobile-menu-button kingster-mobile-button-hamburger"
+                        href="#kingster-mobile-menu"><span></span></a>
+                    <div class="kingster-mm-menu-wrap kingster-navigation-font" id="kingster-mobile-menu"
+                         data-slide="right">
+                        <ul id="menu-main-navigation" class="m-menu">
+                            <li class="menu-item menu-item-home current-menu-item"><a
+                                    href="index.html">Home</a>
+
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">About Us</a>
+                              <ul class="sub-menu">
+                                <li class="menu-item menu-item-has-children"><a
+                                  href="#">PICT at Glance</a>
+                                  <ul class="sub-menu">
+                                    <li class="menu-item"><a
+                                      href="blog-full-left-sidebar-with-frame.html">Vision Mission</a></li>
+                                    <li class="menu-item"><a
+                                      href="blog-full-left-sidebar-with-frame.html">Basic Info</a></li>
+                                    <li class="menu-item"><a
+                                      href="blog-full-left-sidebar-with-frame.html">History</a></li>
+
+                                  </ul>
+                                </li>
+                                <li class="menu-item"><a
+                                  href="blog-full-left-sidebar-with-frame.html">Registrar's Office</a></li>
+
+                              </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a
+                                    href="bachelor-of-science-in-business-administration.html">Academics</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item menu-item-has-children"><a>Departments</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a
+                                                    href="#">First Year Engineering</a></li>
+                                            <li class="menu-item"><a href="#">Computer Engineering</a></li>
+                                            <li class="menu-item"><a href="#">Electronics and Telecommunication</a></li>
+                                            <li class="menu-item"><a href="#">Information Technology</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children"><a href="#">Student</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="#">Time Table</a></li>
+                                            <li class="menu-item"><a href="#">Downloads</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children"><a href="#">Resources</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a
+                                                    href="bachelor-of-science-in-business-administration.html">Academic Calendar</a></li>
+
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">Admissions</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="apply-to-kingster.html">Undergraduate</a></li>
+                                    <li class="menu-item"><a href="campus-tour.html">Postgraduate</a></li>
+                                    <li class="menu-item"><a href="scholarships.html">Fees Structure</a></li>
+                                    <li class="menu-item"><a href="athletics.html">Cut Off</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="#">Life@PICT</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#">Campus Tour</a></li>
+                                    <li class="menu-item"><a href="#">Extra-Curricular</a></li>
+                                    <li class="menu-item"><a href="#">Co-Curricular</a></li>
+                                    <li class="menu-item menu-item-has-children"><a href="#">Common Facilities</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-has-children"><a href="">Hostel</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="">Girls</a></li>
+                                                    <li class="menu-item"><a href="">Boys</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item"><a href="">Medical</a></li>
+                                            <li class="menu-item"><a href="">Sports</a></li>
+                                            <li class="menu-item"><a href="">Internet</a></li>
+                                            <li class="menu-item"><a href="">Central Library</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="athletics.html">Placements</a></li>
+                            <li class="menu-item"><a href="university-life.html">Cell@PICT</a></li>
+                            <li class="menu-item"><a href="university-life.html">Gallery</a></li>
+                            <li class="menu-item"><a href="university-life.html">Alumni</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kingster-body-outer-wrapper ">
+    <div class="kingster-body-wrapper clearfix  kingster-with-frame">
+        <div class="kingster-top-bar">
+            <div class="kingster-top-bar-background"></div>
+            <div class="kingster-top-bar-container kingster-container ">
+                <div class="kingster-top-bar-container-inner clearfix">
+                    <div class="kingster-top-bar-left kingster-item-pdlr"><i class="fa fa-envelope-open-o"
+                                                                             id="i_fd84_0"></i> webmaster@pict.edu
+                    </div>
+                    <div class="kingster-top-bar-right kingster-item-pdlr">
+                        <ul id="kingster-top-bar-menu"
+                            class="sf-menu kingster-top-bar-menu kingster-top-bar-right-menu">
+                            <li class="menu-item kingster-normal-menu"><a href="#">PICT Email</a></li>
+
+                        </ul>
+                        <div class="kingster-top-bar-right-social"></div>
+                        <a class="kingster-top-bar-right-button" href="#" target="_blank">MIS Portal</a></div>
+                </div>
+            </div>
+        </div>
+        <header class="kingster-header-wrap kingster-header-style-plain  kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed"
+                data-navigation-offset="75px">
+            <div class="kingster-header-background"></div>
+            <div class="kingster-header-container  kingster-container">
+                <div class="kingster-header-container-inner clearfix">
+                    <div class="kingster-logo  kingster-item-pdlr">
+                        <div class="kingster-logo-inner">
+                            <a class="" href="index.html"><img src="images/logo.png" alt=""/></a>
+                        </div>
+                    </div>
+                    <div class="kingster-navigation kingster-item-pdlr clearfix ">
+                        <div class="kingster-main-menu" id="kingster-main-menu">
+                            <ul id="menu-main-navigation-1" class="sf-menu">
+                                <li class="menu-item menu-item-home current-menu-item kingster-normal-menu">
+                                    <a href="index.html" class="sf-with-ul-pre">Home</a>                                  
+                                </li>
+                                <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#"
+                                                                                                     class="sf-with-ul-pre">About
+                                    Us</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#">PICT At Glance</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="#">Vision Misson</a></li>
+                                                <li class="menu-item"><a href="#">Basic Info</a></li>
+                                                <li class="menu-item"><a href="#">History</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a href="#">Registrar's Office</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children kingster-mega-menu"><a
+                                        href="bachelor-of-science-in-business-administration.html"
+                                        class="sf-with-ul-pre">Academics</a>
+                                    <div class="sf-mega sf-mega-full megaimg">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-has-children" data-size="15"><a
+                                                    class="sf-with-ul-pre">Departments</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a
+                                                            href="#">First Year Engineering</a></li>
+                                                    <li class="menu-item"><a href="#">Computer Engineering</a>
+                                                    </li>
+                                                    <li class="menu-item"><a href="#">Electronics and Telecommunication</a>
+                                                    </li>
+                                                    <li class="menu-item"><a href="#">Information Technology</a></li>
+
+
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children" data-size="15"><a href="#"
+                                                                                                           class="sf-with-ul-pre">Student</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="#">Time Table and Syllabus</a></li>
+                                                    <li class="menu-item"><a href="#">Downloads</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children" data-size="15"><a href="#"
+                                                                                                           class="sf-with-ul-pre">Resources</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a
+                                                            href="bachelor-of-science-in-business-administration.html">Academic Calendar</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item" data-size="15">
+                                                <div class="kingster-mega-menu-section-content"><img
+                                                        src="upload/mega-menu-logo.png" id="img_fd84_0" alt=""/> <span
+                                                        id="span_fd84_0">Academic offerings include 95 majors, 86 minors, and more than 100 in-major specializations</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#"
+                                                                                                     class="sf-with-ul-pre">Admissions</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item" data-size="60"><a href="#">Undergraduate</a></li>
+                                        <li class="menu-item" data-size="60"><a href="#">Postgraduate</a></li>
+                                        <li class="menu-item" data-size="60"><a href="#">Fees Structure</a></li>
+                                        <li class="menu-item" data-size="60"><a href="#">Cut Off</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#">Life@PICT</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">Campus Tour</a></li>
+                                        <li class="menu-item"><a href="#">Extra-Curricular</a></li>
+                                        <li class="menu-item"><a href="#">Co-Curricular</a></li>
+                                        <li class="menu-item menu-item-has-children kingster-normal-menu"><a href="#">Common Facilities</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-has-children"><a href="">Hostel</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="">Girls</a></li>
+                                                        <li class="menu-item"><a href="">Boys</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item kingster-normal-menu"><a href="">Medical</a></li>
+                                                <li class="menu-item kingster-normal-menu"><a href="">Sports</a></li>
+                                                <li class="menu-item kingster-normal-menu"><a href="">Internet</a></li>
+                                                <li class="menu-item kingster-normal-menu"><a href="">Central Library</a></li>
+
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">Placements</a></li>
+
+                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">Cell@PICT</a></li>
+                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">Gallery</a></li>
+                                <li class="menu-item kingster-normal-menu"><a href="university-life.html">Alumni</a></li>                            </ul>
+                            <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div>
+                        </div>
+                        <div class="kingster-main-menu-right-wrap clearfix ">
+                            <div class="kingster-main-menu-search" id="kingster-top-search"><i class="icon_search"></i>
+                            </div>
+                            <div class="kingster-top-search-wrap">
+                                <div class="kingster-top-search-close"></div>
+                                <div class="kingster-top-search-row">
+                                    <div class="kingster-top-search-cell">
+                                        <form role="search" method="get" class="search-form" action="#">
+                                            <input type="text" class="search-field kingster-title-font"
+                                                   placeholder="Search..." value="" name="s">
+                                            <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
+                                            <input type="submit" class="search-submit" value="Search">
+                                            <div class="kingster-top-search-close"><i class="icon_close"></i></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="kingster-page-wrapper" id="kingster-page-wrapper">
+            <div class="gdlr-core-page-builder-body">
+                <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;">
+                    <div class="gdlr-core-pbf-background-wrap" style="background-color: #192f59 ;"></div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
+                            <div class="gdlr-core-pbf-element">
+                                <div class="gdlr-core-revolution-slider-item gdlr-core-item-pdlr gdlr-core-item-pdb "
+                                     style="padding-bottom: 0px ;">
+
+                                    <div id="rev_slider_1_1_wrapper"
+                                         class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery"
+                                         style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+                                        <div id="rev_slider_1_1" class="rev_slider fullwidthabanner"
+                                             style="display:none;" data-version="5.4.8">
+                                            <ul>
+                                                <li data-index="rs-3" data-transition="fade" data-slotamount="default"
+                                                    data-hideafterloop="0" data-hideslideonmobile="off"
+                                                    data-easein="default" data-easeout="default" data-masterspeed="300"
+                                                    data-thumb="upload/slider-1-2-100x50.jpg" data-rotate="0"
+                                                    data-saveperformance="off" data-title="Slide" data-param1=""
+                                                    data-param2="" data-param3="" data-param4="" data-param5=""
+                                                    data-param6="" data-param7="" data-param8="" data-param9=""
+                                                    data-param10="" data-description=""><img src="upload/slider-1-2.jpg"
+                                                                                             alt="" title="slider-1-2"
+                                                                                             width="1800" height="1119"
+                                                                                             data-bgposition="center center"
+                                                                                             data-bgfit="cover"
+                                                                                             data-bgrepeat="no-repeat"
+                                                                                             class="rev-slidebg"
+                                                                                             data-no-retina>
+                                                    <div class="tp-caption   tp-resizeme" id="slide-3-layer-1"
+                                                         data-x="38" data-y="center" data-voffset="-146"
+                                                         data-width="['auto']" data-height="['auto']" data-type="text"
+                                                         data-responsive_offset="on"
+                                                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                         style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">
+                                                        A Place Of Intense Energy And Creativity
+                                                    </div>
+                                                    <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
+                                                         id="slide-3-layer-4" data-x="33" data-y="center"
+                                                         data-voffset="-44" data-width="['830']" data-height="['118']"
+                                                         data-type="shape" data-responsive_offset="on"
+                                                         data-frames='[{"delay":330,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                         style="z-index: 6;background-color:rgba(24,36,59,0.9);border-radius:3px 3px 3px 3px;"></div>
+                                                    <div class="tp-caption   tp-resizeme" id="slide-3-layer-2"
+                                                         data-x="55" data-y="center" data-voffset="-52"
+                                                         data-width="['auto']" data-height="['auto']" data-type="text"
+                                                         data-responsive_offset="on"
+                                                         data-frames='[{"delay":360,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                         style="z-index: 7; white-space: nowrap; font-size: 43px; line-height: 43px; font-weight: 700; color: #ffffff; letter-spacing: 0px;font-family:Playfair Display;">
+                                                        Pune Institute Of Computer Technology
+                                                    </div>
+                                                    <div class="tp-caption   tp-resizeme" id="slide-3-layer-3"
+                                                         data-x="423" data-y="center" data-voffset="-51"
+                                                         data-width="['auto']" data-height="['auto']" data-type="text"
+                                                         data-responsive_offset="on"
+                                                         data-frames='[{"delay":360,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                         style="z-index: 8; white-space: nowrap; font-size: 88px; line-height: 88px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Playfair Display;"></div>
+                                                    <div class="tp-caption rev-btn rev-hiddenicon " id="slide-3-layer-6"
+                                                         data-x="34" data-y="center" data-voffset="80"
+                                                         data-width="['auto']" data-height="['auto']" data-type="button"
+                                                         data-responsive_offset="on"
+                                                         data-frames='[{"delay":660,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(1,61,135);bg:rgba(255,255,255,1);bw:0 0 0 5px;"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[19,19,19,19]"
+                                                         data-paddingright="[21,21,21,21]"
+                                                         data-paddingbottom="[19,19,19,19]"
+                                                         data-paddingleft="[21,21,21,21]"
+                                                         style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 16px; font-weight: 600; color: #2d2d2d; letter-spacing: 0px;font-family:Poppins;background-color:rgb(255,255,255);border-color:rgb(61,177,102);border-style:solid;border-width:0px 0px 0px 5px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                                                        Take A Tour
+                                                    </div>
+                                                </li>
+                                                <li data-index="rs-1" data-transition="fade" data-slotamount="default"
+                                                    data-hideafterloop="0" data-hideslideonmobile="off"
+                                                    data-easein="default" data-easeout="default" data-masterspeed="300"
+                                                    data-thumb="upload/slider-2-100x50.jpg" data-rotate="0"
+                                                    data-saveperformance="off" data-title="Slide" data-param1=""
+                                                    data-param2="" data-param3="" data-param4="" data-param5=""
+                                                    data-param6="" data-param7="" data-param8="" data-param9=""
+                                                    data-param10="" data-description=""><img src="upload/slider-2.jpg"
+                                                                                             alt="" title="slider-2"
+                                                                                             width="1800" height="1119"
+                                                                                             data-bgposition="center center"
+                                                                                             data-bgfit="cover"
+                                                                                             data-bgrepeat="no-repeat"
+                                                                                             class="rev-slidebg"
+                                                                                             data-no-retina>
+                                                    <div class="tp-caption   tp-resizeme" id="slide-1-layer-1"
+                                                         data-x="36" data-y="center" data-voffset="-120"
+                                                         data-width="['auto']" data-height="['auto']" data-type="text"
+                                                         data-responsive_offset="on"
+                                                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                         style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">
+                                                        PICT has secured
+                                                    </div>
+                                                    <div class="tp-caption   tp-resizeme" id="slide-1-layer-2"
+                                                         data-x="33" data-y="center" data-voffset="-31"
+                                                         data-width="['auto']" data-height="['auto']" data-type="text"
+                                                         data-responsive_offset="on"
+                                                         data-frames='[{"delay":370,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                         style="z-index: 6; white-space: nowrap; font-size: 83px; line-height: 83px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">
+                                                        AIR 1 in SIH 2019
+                                                    </div>
+                                                    <div class="tp-caption rev-btn rev-hiddenicon " id="slide-1-layer-6"
+                                                         data-x="34" data-y="center" data-voffset="80"
+                                                         data-width="['auto']" data-height="['auto']" data-type="button"
+                                                         data-responsive_offset="on"
+                                                         data-frames='[{"delay":740,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,64,132);bg:rgba(255,255,255,1);bw:0 0 0 5px;"}]'
+                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                         data-paddingtop="[19,19,19,19]"
+                                                         data-paddingright="[21,21,21,21]"
+                                                         data-paddingbottom="[19,19,19,19]"
+                                                         data-paddingleft="[21,21,21,21]"
+                                                         style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 16px; font-weight: 600; color: #2d2d2d; letter-spacing: 0px;font-family:Poppins;background-color:rgb(255,255,255);border-color:rgb(61,177,102);border-style:solid;border-width:0px 0px 0px 5px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                                                        Take A Tour
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <div class="tp-bannertimer tp-bottom"
+                                                 style="visibility: hidden !important;"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper  hp1-col-services" data-skin="Blue Title" id="gdlr-core-wrapper-1">
+                    <div class="gdlr-core-pbf-background-wrap"></div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
+                            <div class=" gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix"
+                                 id="div_1dd7_0">
+
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js  gdlr-core-column-extend-left"
+                                     id="div_1dd7_64" data-sync-height="height-3" data-sync-height-center=""
+                                     style="height: 125px;">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
+                                                <div class="gdlr-core-text-box-item-content" id="div_1dd7_66">
+                                                    <div class="gdlr-core-twitter-item gdlr-core-item-pdb"
+                                                         id="div_1dd7_67">
+                                                        <div class="gdlr-core-block-item-title-nav ">
+                                                            <div class="gdlr-core-flexslider-nav gdlr-core-plain-style gdlr-core-block-center"></div>
+                                                        </div>
+
+                                                        <div class="gdlr-core-twitter-content">
+                                                            <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 "
+                                                                 data-type="carousel" data-column="1"
+                                                                 data-nav="navigation"
+                                                                 data-nav-parent="gdlr-core-twitter-item">
+
+                                                                <div class="flex-viewport"
+                                                                     style="overflow: hidden; position: relative;">
+                                                                    <ul class="slides" id="ul_1dd7_0"
+                                                                        style="width: 600%; margin-left: 0px;">
+                                                                        <li class="gdlr-core-item-mglr"
+                                                                            style="width: 825px; margin-right: 40px; float: left; display: block;">
+                                                                            <div class="gdlr-core-twitter-item-list">
+                                                                                <span class="gdlr-core-twitter-item-list-content">Shaking off the working week! What’s on the agenda for the weekend? by KonstantinKolosov via…
+                                                                                    <a target="_blank"
+                                                                                       href="https://t.co/fSyxq53H6P">https://t.co/fSyxq53H6P</a>
+                                                                                </span>
+                                                                                <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
+                                                                                    <a class="gdlr-core-twitter-date"
+                                                                                       href="http://twitter.com/Envato/statuses/1030582660324892674"
+                                                                                       target="_blank"> 18 hours ago</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="gdlr-core-item-mglr"
+                                                                            style="width: 825px; margin-right: 40px; float: left; display: block;">
+                                                                            <div class="gdlr-core-twitter-item-list">
+                                                                                <span class="gdlr-core-twitter-item-list-content">RT
+                                                                                    <a href="http://www.twitter.com/placeitapp">@placeitapp</a>: Making a
+                                                                                    <a target="_blank"
+                                                                                       href="http://twitter.com/search?q=YouTube">#YouTube</a> banner for your channel is easy with Placeit’s
+                                                                                    <a target="_blank"
+                                                                                       href="http://twitter.com/search?q=bannermaker!">#bannermaker!</a> Make your own in sec…
+                                                                                    <a target="_blank"
+                                                                                       href="https://t.co/0X22tX3wtm">https://t.co/0X22tX3wtm</a>
+                                                                                </span>
+                                                                                <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
+                                                                                    <a class="gdlr-core-twitter-date"
+                                                                                       href="http://twitter.com/Envato/statuses/1030338474891792385"
+                                                                                       target="_blank"> yesterday</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="gdlr-core-item-mglr"
+                                                                            style="width: 825px; margin-right: 40px; float: left; display: block;">
+                                                                            <div class="gdlr-core-twitter-item-list">
+                                                                                <span class="gdlr-core-twitter-item-list-content">Our Chief People Officer
+                                                                                    <a href="http://www.twitter.com/MRidsdale16">@MRidsdale16</a> joined
+                                                                                    <a href="http://www.twitter.com/benjaminlaw">@benjaminlaw</a>  and
+                                                                                    <a href="http://www.twitter.com/raejohnston">@raejohnston</a> on
+                                                                                    <a href="http://www.twitter.com/tsushow">@tsushow</a> to discuss all things Cultu…
+                                                                                    <a target="_blank"
+                                                                                       href="https://t.co/uszxz0qicU">https://t.co/uszxz0qicU</a>
+                                                                                </span>
+                                                                                <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
+                                                                                    <a class="gdlr-core-twitter-date"
+                                                                                       href="http://twitter.com/Envato/statuses/1029988653282541570"
+                                                                                       target="_blank"> 2 days ago</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper " id="gdlr-core-wrapper-2">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_13"
+                             data-parallax-speed="0.8"></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
+                                <div class="msg">
+                                    <img class="msg-bg" src="images/bg_msg.jpg" alt=""/>
+                                    <img class="msg-img" src="images/photo_trustee.png" alt="Photo">
+                                    <p class="msg-txt">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur."</p>
+                                    <p class="msg-name">Mr. R. S. Kothavale</p>
+                                    <p class="msg-position">Trustee,<br> Pune Institute of Computer Technology, Pune</p>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-4">
+                                <div class="msg">
+                                    <img class="msg-bg" src="images/bg_msg.jpg" alt=""/>
+                                    <img class="msg-img" src="images/photo_principal.jpg" alt="Photo">
+                                    <p class="msg-txt">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur."</p>
+                                    <p class="msg-name">Dr. P. T. Kulkarni</p>
+                                    <p class="msg-position">Principal,<br> Pune Institute of Computer Technology, Pune</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper " id="gdlr-core-wrapper-2">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                             data-parallax-speed="0.8"></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js "
+                                     style="padding: 80px 70px 55px 55px" id="div_1dd7_14" data-sync-height="height-1">
+                                    <div class="gdlr-core-pbf-background-wrap">
+                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                             id="div_1dd7_15" data-parallax-speed="0"></div>
+                                    </div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                                        <h3 style="text-align: center">News</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-4">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_16"
+                                     data-sync-height="height-1">
+                                    <div class="gdlr-core-pbf-background-wrap">
+                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                             id="div_1dd7_17" data-parallax-speed="0.1"></div>
+                                    </div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                                        <h3 style="text-align: center">Google Calendar</h3>
+                                        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FKolkata&amp;src=amF5YWd3YWxhbmkxOEBnbWFpbC5jb20&amp;src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%230B8043"
+                                                style="border-width:0" width="600" height="400" frameborder="0"
+                                                scrolling="no"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="uni_toppers_wrapper text-center">
+                    <h3>University Toppers</h3>
+                <div class="uni_toppers">
+                    <div class="div1">
+                        <div class="col-sm-3" id="team">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--1">TOPPER1</span>
+                                    </h4>
+                                    <div class="card__details">
+                                        First_Name Last_Name
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-1">
+                                    <div class="card__cta">
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/manjeeta.kale" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/manjeeta-kale-b25134168/"class="fab fa-linkedin"></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--2">TOPPER2</span>
+                                    </h4>
+                                    <div class="card__details">
+                                        XyZ
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-2">
+                                    <div class="card__cta">
+
+
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/tusharshelar28" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/tushar-shelar/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/shelar.tushar07/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--3">TOPPER3</span>
+                                    </h4>
+                                    <div class="card__details">xYZ
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-3">
+                                    <div class="card__cta">
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="card" data-aos="fade-up">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture">
+                                        <img class="card_img" src="images/photo_trustee.png">
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--4 bg-dark">TOPPER4</span>
+                                    </h4>
+                                    <div class="card__details">XYz
+                                    </div>
+
+                                </div>
+                                <div class="card__side card__side--back card__side--back-4">
+                                    <div class="card__cta">
+
+                                        &nbsp;
+                                        <div class="social_handles">
+                                            <a href="https://www.facebook.com/vinay.chawla.526" class="fab fa-facebook-square"></a>
+                                            <a href="https://www.linkedin.com/in/vinaychawla11/"class="fab fa-linkedin"></a>
+                                            <a href="https://www.instagram.com/magical_realms/?hl=en"class="fab fa-instagram"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- This div is intentionally kept empty (content added using js) --><div class="div2"></div>
+                </div>
+
+
+
+                <script type="text/javascript">
+
+                    function pause(){
+                        $(".div1").attr("style", "animation-play-state: paused;");
+                        $(".div2").attr("style", "animation-play-state: paused;");
+                    }
+
+                    $('.div2').html($('.div1').html());
+
+                    function play(){
+                        $(".div1").attr("style", "");
+                        $(".div2").attr("style", "");
+                    }
+
+                    $(".div1").hover(pause, play);
+                    $(".div2").hover(pause, play);
+                </script>
+                </div>
+
+
+                <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                    <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom">
+                        <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
+                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js "
+                                 style="padding: 80px 70px 55px 55px" id="div_1dd7_14" data-sync-height="height-1">
+                                <div class="gdlr-core-pbf-background-wrap">
+                                    <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                         id="div_1dd7_15" data-parallax-speed="0"></div>
+                                </div>
+                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                                    <h3 style="text-align: center">Placement Status</h3>
+
+                                    <div id="piechart"></div>
+
+                                    <script type="text/javascript"
+                                            src="https://www.gstatic.com/charts/loader.js"></script>
+
+                                    <script type="text/javascript">
+                                        // Load google charts
+                                        google.charts.load('current', {'packages': ['corechart']});
+                                        google.charts.setOnLoadCallback(drawChart);
+
+                                        // Draw the chart and set the chart values
+                                        function drawChart() {
+                                            var data = google.visualization.arrayToDataTable([
+                                                ['Placement', 'Percentage'],
+                                                ['Placed', 90],
+                                                ['Not Placed', 10],
+                                            ]);
+
+                                            // Optional; add a title and set the width and height of the chart
+                                            var options = {'title': 'Overall Placement', 'width': 600, 'height': 400};
+
+                                            // Display the chart inside the <div> element with id="piechart"
+                                            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                            chart.draw(data, options);
+                                        }
+                                    </script>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-4">
+                            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_16"
+                                 data-sync-height="height-1">
+                                <div class="gdlr-core-pbf-background-wrap">
+                                    <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                         id="div_1dd7_17" data-parallax-speed="0.1"></div>
+                                </div>
+                                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                                    <h3 style="text-align: center">Result Analysis</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom">
+                    <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
+                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js "
+                             style="padding: 80px 70px 55px 55px" id="div_1dd7_14" data-sync-height="height-1">
+                            <div class="gdlr-core-pbf-background-wrap">
+                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_15"
+                                     data-parallax-speed="0"></div>
+                            </div>
+                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                                <h3 style="text-align: center">Quick Links</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-4">
+                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_16"
+                             data-sync-height="height-1">
+                            <div class="gdlr-core-pbf-background-wrap">
+                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_17"
+                                     data-parallax-speed="0.1"></div>
+                            </div>
+                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                                <h3 style="text-align: center">Contact Us</h3>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5760775413232!2d73.84864491439687!3d18.457547175917043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eac85230ba47%3A0x871eddd0a8a0a108!2sPune+Institute+of+Computer+Technology!5e0!3m2!1sen!2sin!4v1557343930714!5m2!1sen!2sin"
+                                        width="600" height="450" frameborder="0" style="border:0"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<br><br>
+<footer>
+    <div class="kingster-footer-wrapper ">
+        <div class="kingster-footer-container kingster-container clearfix">
+            <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                <div id="text-2" class="widget widget_text kingster-widget">
+                    <div class="textwidget">
+                        <p><img src="upload/footer-logo.png" alt=""/>
+                            <br/> <span class="gdlr-core-space-shortcode" id="span_1dd7_10"></span>
+                            <br/> Box 35300
+                            <br/> 1810 Campus Way NE
+                            <br/> Bothell, WA 98011-8246</p>
+                        <p><span id="span_1dd7_11">+1-2534-4456-345</span>
+                            <br/> <span class="gdlr-core-space-shortcode" id="span_1dd7_12"></span>
+                            <br/> <a id="a_1dd7_8" href="mailto:admin@kingsteruni.edu">admin@kingsteruni.edu</a></p>
+                        <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-left-align">
+                            <div class="gdlr-core-divider-line gdlr-core-skin-divider" id="div_1dd7_111"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                <div id="gdlr-core-custom-menu-widget-2"
+                     class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                    <h3 class="kingster-widget-title">Our Campus</h3><span class="clear"></span>
+                    <div class="menu-our-campus-container">
+                        <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                            <li class="menu-item"><a href="#">Acedemic</a></li>
+                            <li class="menu-item"><a href="#">Planning &#038; Administration</a></li>
+                            <li class="menu-item"><a href="#">Campus Safety</a></li>
+                            <li class="menu-item"><a href="#">Office of the Chancellor</a></li>
+                            <li class="menu-item"><a href="#">Facility Services</a></li>
+                            <li class="menu-item"><a href="#">Human Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                <div id="gdlr-core-custom-menu-widget-3"
+                     class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                    <h3 class="kingster-widget-title">Campus Life</h3><span class="clear"></span>
+                    <div class="menu-campus-life-container">
+                        <ul id="menu-campus-life" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                            <li class="menu-item"><a href="#">Accessibility</a></li>
+                            <li class="menu-item"><a href="#">Financial Aid</a></li>
+                            <li class="menu-item"><a href="#">Food Services</a></li>
+                            <li class="menu-item"><a href="#">Housing</a></li>
+                            <li class="menu-item"><a href="#">Information Technologies</a></li>
+                            <li class="menu-item"><a href="#">Student Life</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                <div id="gdlr-core-custom-menu-widget-4"
+                     class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                    <h3 class="kingster-widget-title">Academics</h3><span class="clear"></span>
+                    <div class="menu-academics-container">
+                        <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                            <li class="menu-item"><a href="#">Canvas</a></li>
+                            <li class="menu-item"><a href="#">Catalyst</a></li>
+                            <li class="menu-item"><a href="#">Library</a></li>
+                            <li class="menu-item"><a href="#">Time Schedule</a></li>
+                            <li class="menu-item"><a href="#">Apply For Admissions</a></li>
+                            <li class="menu-item"><a href="#">Pay My Tuition</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="kingster-copyright-wrapper">
+        <div class="kingster-copyright-container kingster-container clearfix">
+            <div class="kingster-copyright-left kingster-item-pdlr">Copyright All Right Reserved 2019, Max Themes</div>
+            <div class="kingster-copyright-right kingster-item-pdlr">
+                <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_1dd7_112">
+                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="google-plus">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="skype">
+                        <i class="fa fa-skype"></i>
+                    </a>
+                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+<script type='text/javascript' src='js/jquery/jquery.js'></script>
+<script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'></script>
+<script type='text/javascript' src='plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js'></script>
+<script type="text/javascript"
+        src="plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript"
+        src="plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript"
+        src="plugins/revslider/public/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript"
+        src="plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript"
+        src="plugins/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript"
+        src="plugins/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript"
+        src="plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js"></script>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    function setREVStartSize(e) {
+        try {
+            e.c = jQuery(e.c);
+            var i = jQuery(window).width(),
+                t = 9999,
+                r = 0,
+                n = 0,
+                l = 0,
+                f = 0,
+                s = 0,
+                h = 0;
+            if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+            }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                var u = (e.c.width(), jQuery(window).height());
+                if (void 0 != e.fullScreenOffsetContainer) {
+                    var c = e.fullScreenOffsetContainer.split(",");
+                    if (c) jQuery.each(c, function (e, i) {
+                        u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                    }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                }
+                f = u
+            } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+            e.c.closest(".rev_slider_wrapper").css({
+                height: f
+            })
+        } catch (d) {
+            console.log("Failure at Presize of Slider:" + d)
+        }
+    }; /*]]>*/
+</script>
+<script>
+    (function (body) {
+        'use strict';
+        body.className = body.className.replace(/\btribe-no-js\b/, 'tribe-js');
+    })(document.body);
+</script>
+<script>
+    var tribe_l10n_datatables = {
+        "aria": {
+            "sort_ascending": ": activate to sort column ascending",
+            "sort_descending": ": activate to sort column descending"
+        },
+        "length_menu": "Show _MENU_ entries",
+        "empty_table": "No data available in table",
+        "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+        "info_empty": "Showing 0 to 0 of 0 entries",
+        "info_filtered": "(filtered from _MAX_ total entries)",
+        "zero_records": "No matching records found",
+        "search": "Search:",
+        "all_selected_text": "All items on this page were selected. ",
+        "select_all_link": "Select all pages",
+        "clear_selection": "Clear Selection.",
+        "pagination": {
+            "all": "All",
+            "next": "Next",
+            "previous": "Previous"
+        },
+        "select": {
+            "rows": {
+                "0": "",
+                "_": ": Selected %d rows",
+                "1": ": Selected 1 row"
+            }
+        },
+        "datepicker": {
+            "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+            "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "monthNamesShort": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "monthNamesMin": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "nextText": "Next",
+            "prevText": "Prev",
+            "currentText": "Today",
+            "closeText": "Done",
+            "today": "Today",
+            "clear": "Clear"
+        }
+    };
+    var tribe_system_info = {
+        "sysinfo_optin_nonce": "a32c675aaa",
+        "clipboard_btn_text": "Copy to clipboard",
+        "clipboard_copied_text": "System info copied",
+        "clipboard_fail_text": "Press \"Cmd + C\" to copy"
+    };
+</script>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    function revslider_showDoubleJqueryError(sliderID) {
+        var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+        errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+        errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+        errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+        errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+        jQuery(sliderID).show().html(errorMessage);
+    } /*]]>*/
+</script>
+
+<script type='text/javascript' src='plugins/goodlayers-core/plugins/combine/script.js'></script>
+<script type='text/javascript'>
+    var gdlr_core_pbf = {
+        "admin": "",
+        "video": {
+            "width": "640",
+            "height": "360"
+        },
+        "ajax_url": "https:\/\/demo.goodlayers.com\/kingster\/wp-admin\/admin-ajax.php"
+    };
+</script>
+<script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
+
+
+<script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+<script type='text/javascript'>
+    var kingster_script_core = {
+        "home_url": "https:\/\/demo.goodlayers.com\/kingster\/"
+    };
+</script>
+<script type='text/javascript' src='js/plugins.min.js'></script>
+<script>
+    /*<![CDATA[*/
+    var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+    var htmlDivCss = "";
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement("div");
+        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+</script>
+<script type="text/javascript">
+    /*<![CDATA[*/
+    if (setREVStartSize !== undefined) setREVStartSize({
+        c: '#rev_slider_1_1',
+        gridwidth: [1380],
+        gridheight: [713],
+        sliderLayout: 'auto'
+    });
+    var revapi1, tpj;
+    (function () {
+        if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+        else onLoad();
+
+        function onLoad() {
+            if (tpj === undefined) {
+                tpj = jQuery;
+                if ("off" == "on") tpj.noConflict();
+            }
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "//demo.goodlayers.com/kingster/wp-content/plugins/revslider/public/assets/js/",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        touch: {
+                            touchenabled: "on",
+                            touchOnDesktop: "off",
+                            swipe_threshold: 75,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "uranus",
+                            enable: true,
+                            hide_onmobile: true,
+                            hide_under: 1500,
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            tmp: '',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 20,
+                                v_offset: 0
+                            }
+                        },
+                        bullets: {
+                            enable: true,
+                            hide_onmobile: false,
+                            hide_over: 1499,
+                            style: "uranus",
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 0,
+                            v_offset: 30,
+                            space: 7,
+                            tmp: '<span class="tp-bullet-inner"></span>'
+                        }
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1380,
+                    gridheight: 713,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "off",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+            ;
+        };
+    }()); /*]]>*/
+</script>
+<script>
+    /*<![CDATA[*/
+    var htmlDivCss = unescape("%23rev_slider_1_1%20.uranus.tparrows%20%7B%0A%20%20width%3A50px%3B%0A%20%20height%3A50px%3B%0A%20%20background%3Argba%28255%2C255%2C255%2C0%29%3B%0A%20%7D%0A%20%23rev_slider_1_1%20.uranus.tparrows%3Abefore%20%7B%0A%20width%3A50px%3B%0A%20height%3A50px%3B%0A%20line-height%3A50px%3B%0A%20font-size%3A40px%3B%0A%20transition%3Aall%200.3s%3B%0A-webkit-transition%3Aall%200.3s%3B%0A%20%7D%0A%20%0A%20%20%23rev_slider_1_1%20.uranus.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20%20opacity%3A0.75%3B%0A%20%20%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C%200%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20background-color%3A%20rgba%28255%2C%20255%2C%20255%2C%200.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23rev_slider_1_1%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23rev_slider_1_1%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%7D%0A");
+    var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+    if (htmlDiv) {
+        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+    } else {
+        var htmlDiv = document.createElement('div');
+        htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+        document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+    } /*]]>*/
+</script>
+</body>
+</html>
