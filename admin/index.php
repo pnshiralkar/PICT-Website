@@ -74,7 +74,7 @@
         <ul class="sidebar-menu list-unstyled">
               <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted active"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
               <li class="sidebar-list-item"><a href="scrollingNews.php" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Scrolling News</span></a></li>
-              <li class="sidebar-list-item"><a href="tables.html" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Toppers</span></a></li>
+              <li class="sidebar-list-item"><a href="toppers.php" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Toppers</span></a></li>
               <li class="sidebar-list-item"><a href="news.php" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>News and Updates</span></a></li>
               <li class="sidebar-list-item"><a href="forms.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Upcoming Events</span></a></li>
           <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="o-wireframe-1 mr-3 text-gray"></i><span>Other Pages</span></a>

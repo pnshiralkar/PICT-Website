@@ -2,7 +2,7 @@
 require_once ('backend/connect.php');
 require_once ('backend/scrolling_news.php');
 require_once ('backend/news.php');
-
+require_once ('backend/toppers.php')
 
 
 
@@ -275,6 +275,31 @@ require_once ('backend/news.php');
           }
         } 
       }
+
+
+        .col-sm-3 {
+            width: calc(100%/<?php echo $num_toppers ?> - 2%);
+            margin: 0 1%;
+            height:150px;
+            float:left;
+        }
+
+        .div1{
+            width: <?php echo $num_toppers*25 ?>%;
+            min-width: 100% !important;
+            display: inline-block;
+            animation: marquee <?php echo $topanimtime ?>s linear infinite;
+        }
+
+        .div2{
+            width: <?php echo $num_toppers*25 ?>%;
+            min-width: 100% !important;
+            display: inline-block;
+            animation: marquee2 <?php echo $topanimtime ?>s linear infinite;
+            animation-delay: <?php echo $topanimtime/2 ?>s;
+        }
+
+
     </style>
     <script>
         $(document).ready(function () {
@@ -1284,47 +1309,21 @@ require_once ('backend/news.php');
                                 <div class="uni_toppers_wrapper text-center">
                                   <div class="uni_toppers" style="">
                                       <div class="div1">
+                                          <?php
+                                          while($rowtop = $result_toppers->fetch_assoc())
+                                          {
+
+                                          ?>
                                           <div class="col-sm-3" id="team">
                                               <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
-                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
+                                                  <img class="card-img-top" src="upload/toppers/<?php echo $rowtop['img'] ?>" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
                                                   <div class="card-body" style="padding: 1.25rem 0">
-                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 1</h3></div>
-                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
+                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px"><?php echo $rowtop['ranktxt'] ?></h3></div>
+                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px"><?php echo $rowtop['name'] ?></p>
                                                   </div>
                                               </div>
                                           </div>
-
-
-                                          <div class="col-sm-3">
-                                              <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
-                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
-                                                  <div class="card-body" style="padding: 1.25rem 0">
-                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 2</h3></div>
-                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-
-                                          <div class="col-sm-3">
-                                              <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
-                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
-                                                  <div class="card-body" style="padding: 1.25rem 0">
-                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 3</h3></div>
-                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-                                          <div class="col-sm-3">
-                                              <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
-                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
-                                                  <div class="card-body" style="padding: 1.25rem 0">
-                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 4</h3></div>
-                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
-                                                  </div>
-                                              </div>
-                                          </div>
+                                          <?php } ?>
                                       </div>
                                       <!-- This div is intentionally kept empty (content added using js) --><div class="div2"></div>
                                   </div>

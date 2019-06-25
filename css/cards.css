@@ -8,18 +8,6 @@
 
 }
 
-.div1 {
-  width:100%;
-  display: inline-block;
-  animation: marquee 20s linear infinite;
-}
-
-.div2 {
-  width:100%;
-  display: inline-block;
-  animation: marquee2 20s linear infinite;
-  animation-delay: 10s;
-}
 
 
 @keyframes marquee {
@@ -38,17 +26,6 @@
   to {
     transform: translateX(-200%);
   }
-}
-
-
-
-
-
-.col-sm-3 {
-  width: 23%;
-  margin: 0 1%; 
-  height:150px;
-  float:left;
 }
 
 
