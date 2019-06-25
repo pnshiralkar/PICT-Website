@@ -1,3 +1,25 @@
+<?php
+require_once ('backend/connect.php');
+require_once ('backend/scrolling_news.php');
+require_once ('backend/news.php');
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
@@ -866,46 +888,26 @@
                                                                        style="overflow: hidden; position: relative;">
                                                                       <ul class="slides " id="ul_1dd7_0"
                                                                           style="width: 100%;">
-                                                                          <li class="gdlr-core-item-mglr"
-                                                                              style="width:100%; float: left; display: block;">
+                                                                          <?php
+                                                                          while($row = $result->fetch_assoc()) {
+                                                                              $news = '<li class="gdlr-core-item-mglr"style="width:100%; float: left; display: block;">
                                                                               <div class="gdlr-core-twitter-item-list">
-                                                                                  <h4 class="gdlr-core-twitter-item-list-content">Shaking off the working week! What’s on the agenda for the weekend? by KonstantinKolosov via…
+                                                                                  <h4 class="gdlr-core-twitter-item-list-content">'.$row['content'].'
                                                                                       <a target="_blank"
-                                                                                         href="https://t.co/fSyxq53H6P">https://t.co/fSyxq53H6P</a>
+                                                                                         href='.$row['url'].'>'.$row['url'].'</a>
                                                                                   </h4>
                                                                                   <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
                                                                                       <a class="gdlr-core-twitter-date"
                                                                                          href="http://twitter.com/Envato/statuses/1030582660324892674"
-                                                                                         target="_blank"> 18 hours ago</a>
+                                                                                         target="_blank">'.$row['date'].'</a>
                                                                                   </span>
                                                                               </div>
-                                                                          </li>
-                                                                          <li class="gdlr-core-item-mglr"
-                                                                                style="width:100%; float: left; display: block;">
-                                                                                <div class="gdlr-core-twitter-item-list">
-                                                                                    <h4 class="gdlr-core-twitter-item-list-content">
-                                                                                      Kingster University was established by John Smith in 1920 for the public benefit and it is recognized.
-                                                                                    </h4>
-                                                                                    <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
-                                                                                        <a class="gdlr-core-twitter-date"
-                                                                                           href="http://twitter.com/Envato/statuses/1030582660324892674"
-                                                                                           target="_blank"> Yesterday</a>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li class="gdlr-core-item-mglr"
-                                                                                style="width:100%; float: left; display: block;">
-                                                                                <div class="gdlr-core-twitter-item-list">
-                                                                                    <h4 class="gdlr-core-twitter-item-list-content">
-                                                                                      Our Chief People Officer @MRidsdale16 joined @benjaminlaw and @raejohnston on @tsushow to discuss all things Cultu…
-                                                                                    </h4>
-                                                                                    <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
-                                                                                        <a class="gdlr-core-twitter-date"
-                                                                                           href="http://twitter.com/Envato/statuses/1030582660324892674"
-                                                                                           target="_blank"> 2 months ago</a>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </li>
+                                                                          </li>';
+                                                                              echo $news;
+                                                                          }
+                                                                          ?>
+
+
                                                                       </ul>
                                                                   </div>
                                                               </div>
@@ -947,99 +949,33 @@
                                                         <a class="gdlr-core-block-item-read-more" href="#" target="_self" id="a_1dd7_5">Read All News</a>
                                                     </div>
                                                     <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
+
                                                         <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
-                                                            <div class="gdlr-core-item-list-inner gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-blog-grid ">
-                                                                    <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                        <a href="#">
-                                                                            <img src="upload/shutterstock_135948689-400x245.jpg" width="700" height="430" alt="" />
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-blog-grid-content-wrap">
-                                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                                <a href="#">June 6, 2016</a>
-                                                                            </span>
-                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                                                                <a href="#" rel="tag">Admission</a>
-                                                                                <span class="gdlr-core-sep">,</span>
-                                                                                <a href="#" rel="tag">Student</a>
-                                                                            </span>
-                                                                        </div>
-                                                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_11">
-                                                                            <a href="#" >Professor Albert joint research on mobile money in Tanzania</a>
-                                                                        </h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
-                                                            <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
-                                                                <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="#">
-                                                                        <img src="upload/shutterstock_218235004-150x150.jpg" alt="" width="150" height="150" title="Student" />
-                                                                    </a>
-                                                                </div>
+                                                            <?php
+                                                            while($row = $result1->fetch_assoc()) {
+                                                                $news1 = '<div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
+                                                                
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#">June 6, 2016</a>
+                                                                            <a href="#">'.$row['date'].'</a>
                                                                         </span>
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                                                            <a href="#" rel="tag">Hot</a>
-                                                                            <span class="gdlr-core-sep">,</span>
-                                                                            <a href="#" rel="tag">Updates</a>
-                                                                        </span>
+
                                                                     </div>
                                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_12">
-                                                                        <a href="#" >A Global MBA for the next generation of business leaders</a>
+                                                                        <a href="'.$row['url'].'" >'.$row['news'].'</a>
                                                                     </h3>
                                                                 </div>
-                                                            </div>
-                                                            <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
-                                                                <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="#">
-                                                                        <img src="upload/shutterstock_218235004-150x150.jpg" alt="" width="150" height="150" title="Student" />
-                                                                    </a>
-                                                                </div>
-                                                                <div class="gdlr-core-blog-widget-content">
-                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#">June 6, 2016</a>
-                                                                        </span>
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                                                            <a href="#" rel="tag">Admission</a>
-                                                                            <span class="gdlr-core-sep">,</span>
-                                                                            <a href="#" rel="tag">Event</a>
-                                                                        </span>
-                                                                    </div>
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_13">
-                                                                        <a href="#" >Professor Tom comments on voluntary recalls by snack brands</a>
-                                                                    </h3>
-                                                                </div>
-                                                            </div>
-                                                            <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
-                                                                <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                                    <a href="#">
-                                                                        <img src="upload/shutterstock_218235004-150x150.jpg" alt="" width="150" height="150" title="Student" />
-                                                                    </a>
-                                                                </div>
-                                                                <div class="gdlr-core-blog-widget-content">
-                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#">June 6, 2016</a>
-                                                                        </span>
-                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                                                            <a href="#" rel="tag">Article</a>
-                                                                            <span class="gdlr-core-sep">,</span>
-                                                                            <a href="#" rel="tag">Research</a>
-                                                                        </span>
-                                                                    </div>
-                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_14">
-                                                                        <a href="#" >Professor Alexa is interviewed about Twitter&#8217;s valuation</a>
-                                                                    </h3>
-                                                                </div>
-                                                            </div>
+                                                            </div';
+                                                                echo $news1;
+
+                                                            }
+
+
+                                                            ?>
+
+
+                                                            >
                                                         </div>
                                                     </div>
                                                 </div>
