@@ -275,31 +275,6 @@ require_once ('backend/toppers.php')
           }
         } 
       }
-
-
-        .col-sm-3 {
-            width: calc(100%/<?php echo $num_toppers ?> - 2%);
-            margin: 0 1%;
-            height:150px;
-            float:left;
-        }
-
-        .div1{
-            width: <?php echo $num_toppers*25 ?>%;
-            min-width: 100% !important;
-            display: inline-block;
-            animation: marquee <?php echo $topanimtime ?>s linear infinite;
-        }
-
-        .div2{
-            width: <?php echo $num_toppers*25 ?>%;
-            min-width: 100% !important;
-            display: inline-block;
-            animation: marquee2 <?php echo $topanimtime ?>s linear infinite;
-            animation-delay: <?php echo $topanimtime/2 ?>s;
-        }
-
-
     </style>
     <script>
         $(document).ready(function () {
@@ -870,6 +845,58 @@ require_once ('backend/toppers.php')
                                                       </div>
                                                   </li>
 
+                                                  <li data-index="rs-1" data-transition="fade" data-slotamount="default"
+                                                      data-hideafterloop="0" data-hideslideonmobile="off"
+                                                      data-easein="default" data-easeout="default" data-masterspeed="300"
+                                                      data-thumb="upload/slider-3-100x50.jpg" data-rotate="0"
+                                                      data-saveperformance="off" data-title="Slide" data-param1=""
+                                                      data-param2="" data-param3="" data-param4="" data-param5=""
+                                                      data-param6="" data-param7="" data-param8="" data-param9=""
+                                                      data-param10="" data-description=""><img src="upload/slider-3.jpg"
+                                                                                               alt="" title="slider-2"
+                                                                                               width="1800" height="1119"
+                                                                                               data-bgposition="center center"
+                                                                                               data-bgfit="cover"
+                                                                                               data-bgrepeat="no-repeat"
+                                                                                               class="rev-slidebg"
+                                                                                               data-no-retina>
+                                                      <div class="tp-caption   tp-resizeme" id="slide-1-layer-1"
+                                                           data-x="36" data-y="center" data-voffset="-120"
+                                                           data-width="['auto']" data-height="['auto']" data-type="text"
+                                                           data-responsive_offset="on"
+                                                           data-frames='[{"delay":20,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                           data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                           data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                           data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                           style="z-index: 5; white-space: nowrap; font-size: 33px; line-height: 33px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">
+                                                          PICT 2018-19
+                                                      </div>
+                                                      <div class="tp-caption   tp-resizeme" id="slide-1-layer-2"
+                                                           data-x="33" data-y="center" data-voffset="-31"
+                                                           data-width="['auto']" data-height="['auto']" data-type="text"
+                                                           data-responsive_offset="on"
+                                                           data-frames='[{"delay":380,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                           data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                           data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                           data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                                           style="z-index: 6; white-space: nowrap; font-size: 83px; line-height: 83px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">
+                                                          BE BATCH
+                                                      </div>
+                                                      <div class="tp-caption rev-btn rev-hiddenicon " id="slide-1-layer-6"
+                                                           data-x="34" data-y="center" data-voffset="80"
+                                                           data-width="['auto']" data-height="['auto']" data-type="button"
+                                                           data-responsive_offset="on"
+                                                           data-frames='[{"delay":760,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,64,132);bg:rgba(255,255,255,1);bw:0 0 0 5px;"}]'
+                                                           data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                           data-paddingtop="[19,19,19,19]"
+                                                           data-paddingright="[21,21,21,21]"
+                                                           data-paddingbottom="[19,19,19,19]"
+                                                           data-paddingleft="[21,21,21,21]"
+                                                           style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 16px; font-weight: 600; color: #2d2d2d; letter-spacing: 0px;font-family:Poppins;background-color:rgb(255,255,255);border-color:rgb(61,177,102);border-style:solid;border-width:0px 0px 0px 5px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+                                                          Take A Tour
+                                                      </div>
+                                                  </li>
+
                                               </ul>
                                               <div class="tp-bannertimer tp-bottom"
                                                    style="visibility: hidden !important;"></div>
@@ -913,26 +940,46 @@ require_once ('backend/toppers.php')
                                                                        style="overflow: hidden; position: relative;">
                                                                       <ul class="slides " id="ul_1dd7_0"
                                                                           style="width: 100%;">
-                                                                          <?php
-                                                                          while($row = $result->fetch_assoc()) {
-                                                                              $news = '<li class="gdlr-core-item-mglr"style="width:100%; float: left; display: block;">
+                                                                          <li class="gdlr-core-item-mglr"
+                                                                              style="width:100%; float: left; display: block;">
                                                                               <div class="gdlr-core-twitter-item-list">
-                                                                                  <h4 class="gdlr-core-twitter-item-list-content">'.$row['content'].'
+                                                                                  <h4 class="gdlr-core-twitter-item-list-content">Shaking off the working week! What’s on the agenda for the weekend? by KonstantinKolosov via…
                                                                                       <a target="_blank"
-                                                                                         href='.$row['url'].'>'.$row['url'].'</a>
+                                                                                         href="https://t.co/fSyxq53H6P">https://t.co/fSyxq53H6P</a>
                                                                                   </h4>
                                                                                   <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
                                                                                       <a class="gdlr-core-twitter-date"
                                                                                          href="http://twitter.com/Envato/statuses/1030582660324892674"
-                                                                                         target="_blank">'.$row['date'].'</a>
+                                                                                         target="_blank"> 18 hours ago</a>
                                                                                   </span>
                                                                               </div>
-                                                                          </li>';
-                                                                              echo $news;
-                                                                          }
-                                                                          ?>
-
-
+                                                                          </li>
+                                                                          <li class="gdlr-core-item-mglr"
+                                                                                style="width:100%; float: left; display: block;">
+                                                                                <div class="gdlr-core-twitter-item-list">
+                                                                                    <h4 class="gdlr-core-twitter-item-list-content">
+                                                                                      Kingster University was established by John Smith in 1920 for the public benefit and it is recognized.
+                                                                                    </h4>
+                                                                                    <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
+                                                                                        <a class="gdlr-core-twitter-date"
+                                                                                           href="http://twitter.com/Envato/statuses/1030582660324892674"
+                                                                                           target="_blank"> Yesterday</a>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="gdlr-core-item-mglr"
+                                                                                style="width:100%; float: left; display: block;">
+                                                                                <div class="gdlr-core-twitter-item-list">
+                                                                                    <h4 class="gdlr-core-twitter-item-list-content">
+                                                                                      Our Chief People Officer @MRidsdale16 joined @benjaminlaw and @raejohnston on @tsushow to discuss all things Cultu…
+                                                                                    </h4>
+                                                                                    <span class="gdlr-core-twitter-item-list-date gdlr-core-skin-caption">
+                                                                                        <a class="gdlr-core-twitter-date"
+                                                                                           href="http://twitter.com/Envato/statuses/1030582660324892674"
+                                                                                           target="_blank"> 2 months ago</a>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </li>
                                                                       </ul>
                                                                   </div>
                                                               </div>
@@ -974,33 +1021,99 @@ require_once ('backend/toppers.php')
                                                         <a class="gdlr-core-block-item-read-more" href="#" target="_self" id="a_1dd7_5">Read All News</a>
                                                     </div>
                                                     <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
-
                                                         <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
-                                                            <?php
-                                                            while($row = $result1->fetch_assoc()) {
-                                                                $news1 = '<div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
-                                                                
+                                                            <div class="gdlr-core-item-list-inner gdlr-core-item-mglr">
+                                                                <div class="gdlr-core-blog-grid ">
+                                                                    <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                                        <a href="#">
+                                                                            <img src="upload/shutterstock_135948689-400x245.jpg" width="700" height="430" alt="" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="gdlr-core-blog-grid-content-wrap">
+                                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                                <a href="#">June 6, 2016</a>
+                                                                            </span>
+                                                                            <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
+                                                                                <a href="#" rel="tag">Admission</a>
+                                                                                <span class="gdlr-core-sep">,</span>
+                                                                                <a href="#" rel="tag">Student</a>
+                                                                            </span>
+                                                                        </div>
+                                                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_11">
+                                                                            <a href="#" >Professor Albert joint research on mobile money in Tanzania</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
+                                                            <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
+                                                                <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                                    <a href="#">
+                                                                        <img src="upload/shutterstock_218235004-150x150.jpg" alt="" width="150" height="150" title="Student" />
+                                                                    </a>
+                                                                </div>
                                                                 <div class="gdlr-core-blog-widget-content">
                                                                     <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                                         <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                            <a href="#">'.$row['date'].'</a>
+                                                                            <a href="#">June 6, 2016</a>
                                                                         </span>
-
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
+                                                                            <a href="#" rel="tag">Hot</a>
+                                                                            <span class="gdlr-core-sep">,</span>
+                                                                            <a href="#" rel="tag">Updates</a>
+                                                                        </span>
                                                                     </div>
                                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_12">
-                                                                        <a href="'.$row['url'].'" >'.$row['news'].'</a>
+                                                                        <a href="#" >A Global MBA for the next generation of business leaders</a>
                                                                     </h3>
                                                                 </div>
-                                                            </div';
-                                                                echo $news1;
-
-                                                            }
-
-
-                                                            ?>
-
-
-                                                            >
+                                                            </div>
+                                                            <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
+                                                                <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                                    <a href="#">
+                                                                        <img src="upload/shutterstock_218235004-150x150.jpg" alt="" width="150" height="150" title="Student" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="gdlr-core-blog-widget-content">
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                            <a href="#">June 6, 2016</a>
+                                                                        </span>
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
+                                                                            <a href="#" rel="tag">Admission</a>
+                                                                            <span class="gdlr-core-sep">,</span>
+                                                                            <a href="#" rel="tag">Event</a>
+                                                                        </span>
+                                                                    </div>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_13">
+                                                                        <a href="#" >Professor Tom comments on voluntary recalls by snack brands</a>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                            <div class="gdlr-core-item-list gdlr-core-blog-widget gdlr-core-item-mglr clearfix gdlr-core-style-small">
+                                                                <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                                    <a href="#">
+                                                                        <img src="upload/shutterstock_218235004-150x150.jpg" alt="" width="150" height="150" title="Student" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="gdlr-core-blog-widget-content">
+                                                                    <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                            <a href="#">June 6, 2016</a>
+                                                                        </span>
+                                                                        <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
+                                                                            <a href="#" rel="tag">Article</a>
+                                                                            <span class="gdlr-core-sep">,</span>
+                                                                            <a href="#" rel="tag">Research</a>
+                                                                        </span>
+                                                                    </div>
+                                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_14">
+                                                                        <a href="#" >Professor Alexa is interviewed about Twitter&#8217;s valuation</a>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1245,7 +1358,7 @@ require_once ('backend/toppers.php')
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" id="div_1dd7_26">
                                                     <div class="gdlr-core-text-box-item-content" id="div_1dd7_27">
-                                                       <img class="msg-img" src="images/photo_principal.JPG" alt="Photo">
+                                                       <img class="msg-img" src="images/photo_trustee.JPG" alt="Photo">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1309,21 +1422,47 @@ require_once ('backend/toppers.php')
                                 <div class="uni_toppers_wrapper text-center">
                                   <div class="uni_toppers" style="">
                                       <div class="div1">
-                                          <?php
-                                          while($rowtop = $result_toppers->fetch_assoc())
-                                          {
-
-                                          ?>
                                           <div class="col-sm-3" id="team">
                                               <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
-                                                  <img class="card-img-top" src="upload/toppers/<?php echo $rowtop['img'] ?>" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
+                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
                                                   <div class="card-body" style="padding: 1.25rem 0">
-                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px"><?php echo $rowtop['ranktxt'] ?></h3></div>
-                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px"><?php echo $rowtop['name'] ?></p>
+                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 1</h3></div>
+                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
                                                   </div>
                                               </div>
                                           </div>
-                                          <?php } ?>
+
+
+                                          <div class="col-sm-3">
+                                              <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
+                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
+                                                  <div class="card-body" style="padding: 1.25rem 0">
+                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 2</h3></div>
+                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+
+                                          <div class="col-sm-3">
+                                              <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
+                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
+                                                  <div class="card-body" style="padding: 1.25rem 0">
+                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 3</h3></div>
+                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                          <div class="col-sm-3">
+                                              <div class="card" style="-webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);">
+                                                  <img class="card-img-top" src="images/sample_photo.png" alt="Card image cap" style="border-radius: 50%; width: 80%; margin: 5% 10%; box-shadow: 4px 4px 15px 0px rgba(1,1,1,1)">
+                                                  <div class="card-body" style="padding: 1.25rem 0">
+                                                      <div style="background: linear-gradient(to right, rgba(27, 41, 69, 1), rgba(27, 41, 69, 0.9), rgba(27, 41, 69, 0.8) , rgba(27, 41, 69, 0));padding: 5px 8px;margin: 5px 0; padding: 5px 8px; margin: 5px 0;"><h3 class="card-title" style="text-transform: uppercase; color: white; margin: 5px">Topper 4</h3></div>
+                                                      <p class="card-text text-center text-dark" style="font-size: larger; font-weight: bold; margin: 1.25rem 10px 0px 10px">Firstname Lastname</p>
+                                                  </div>
+                                              </div>
+                                          </div>
                                       </div>
                                       <!-- This div is intentionally kept empty (content added using js) --><div class="div2"></div>
                                   </div>
@@ -1875,3 +2014,4 @@ require_once ('backend/toppers.php')
 </script>
 </body>
 </html>
+
